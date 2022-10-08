@@ -14,10 +14,9 @@ h3, .font-h3 {
 
 h1 {
   font-family: "Playfair Display", serif;
-  background: #C7B299;
+  background: #D4A127;
   color: #707070;
   display: inline-block;
-  font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
 }
@@ -27,8 +26,7 @@ h1 {
 }
 
 h2 {
-  color: #6EF8C9;
-  font-weight: 900; /* Heavy */
+  color: #C7B299;
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
@@ -36,18 +34,9 @@ h2 {
 
 h3 {
   font-size: 2.25em;
-  font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
-}
-
-h4 {
-  font-size: 1.5em;
-  font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
-  margin: 0.5em 0;
 }
 
 .font-body {
@@ -70,37 +59,7 @@ a {
 }
 
 a:hover {
-  border-color: #C7B299;
-}
-
-[role=banner] > h1 {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.summary {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 15% 0;
-}
-.summary p:last-child {
-  border-top: 1px solid #C7B299;
-  margin-top: 1em;
-  padding-top: 1.5em;
-}
-.summary a {
-  color: #ffffff;
-}
-
-.preamble {
-  background: rgba(255, 255, 255, 0.9);
-  color: #44311E;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
+  border-color: #6EF8C9;
 }
 
 .intro {
@@ -112,7 +71,7 @@ a:hover {
 }
 
 html {
-  background-color: #C7B299;
+  background-color: #6EF8C9;
   padding: 5%;
 }
 
@@ -144,6 +103,13 @@ section {
   flex: 1 1 25%;
 }
 
+h4 {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
 .swatch {
   width: 100%;
   height: 100px;
@@ -155,7 +121,7 @@ section {
 }
 
 .color-h2 {
-  background-color: #6EF8C9;
+  background-color: #C7B299;
 }
 
 .color-h3 {
@@ -163,7 +129,7 @@ section {
 }
 
 .accent1 {
-  background-color: #C7B299;
+  background-color: #6EF8C9;
 }
 
 .accent2 {
@@ -178,7 +144,7 @@ section {
   background-color: #F45184;
 }
 
-.text-dark {
+.textdark {
   background-color: #44311E;
 }
 
@@ -189,17 +155,16 @@ section {
 }
 
 .uppercase {
-  font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #44311E;
 }
 
 .uppercase-light {
-  font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFFFFF;
+  background-color: #F45184;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */

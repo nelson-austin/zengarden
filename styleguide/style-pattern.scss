@@ -15,7 +15,7 @@
   body {
     font-family: $font-body;
     font-size: 85%;
-    color: $color-textdark;
+    color: $color-body;
     background-color: $color-accent2;
     margin: 0;
     padding: 1em;
@@ -37,6 +37,13 @@
       margin: 0;
       flex: 1 1 25%;
     }
+  }
+
+  h4 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin: 0.5em 0;
   }
 
   .swatch {
@@ -65,17 +72,21 @@
   .accent4 {
     background-color: $color-accent4;
   }
-  .text-dark {
-    background-color: $color-textdark;
+  .textdark {
+    background-color: $color-body;
   }
+
   .element {
     border: 1px solid;
     margin: 0.5em;
     padding: 1em;
   }
+
   .uppercase {
     @include atoms.uppercase;
   }
+  
   .uppercase-light {
     @include atoms.uppercase($color-textlight);
+    background-color: $color-accent4;
   }
