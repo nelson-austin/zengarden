@@ -13,11 +13,11 @@
 }
 
 @mixin uppercase($color: $color-textdark) {
-  font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $color;
 }
+
 @mixin divider($color: $color-accent1) {
   border-top: 1px solid $color;
   margin-top: 1em;
