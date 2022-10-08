@@ -1,7 +1,83 @@
 @use 'variables' as *;
 
-// define and style 5 atoms(elements)
+// mixins to take care of repeated patterns.
+@mixin set-font($size: 1em, $line-height: normal, $font: $font-body) {
+  font-family: $font;
+  font-size: $size;
+  line-height: $line-height;
+}
 
-// at least one mixin(s) to take care of repeated patterns.
+@mixin set-flex($direction: row, $wrap: wrap) {
+  display: flex;
+  flex-flow: $direction $wrap;
+}
 
-// these styles here should describe how the atoms (elements) should appear most of the time.  They can be overridden at the molecule (block) as necessary
+@mixin uppercase($color: $color-textdark) {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color;
+}
+@mixin divider($color: $color-accent1) {
+  border-top: 1px solid $color;
+  margin-top: 1em;
+  padding-top: 1.5em;
+}
+// these styles here should describe how the atoms (elements) should appear most of the time.
+// They can be overridden at the molecule (block) as necessary
+h2,
+h3 {
+  margin: 0;
+}
+h2 {
+    font-family: $font-h2;
+}
+h3 {
+    font-family: $font-h3;
+}
+h1 {
+  font-family: $font-h1;
+  background: $color-accent1;
+  color: $color-h1;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+h2 {
+  color: $color-h2;
+  font-weight: 900; /* Heavy */
+  font-size: 6em;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+h3 {
+  font-size: 2.25em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+h4 {
+  font-size: 1.5em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+p {
+  @include set-font(1em, 1.5em);
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid $color-accent2;
+  color: $color-textdark;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+a:hover {
+  border-color: $color-accent1;
+}

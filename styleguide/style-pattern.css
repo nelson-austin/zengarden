@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
+h2,
+h3 {
+  margin: 0;
+}
+
+h2 {
+  font-family: "Cousine", monospace;
+}
+
+h3 {
+  font-family: "Merriweather", serif;
+}
+
+h1 {
+  font-family: "Courier Prime", monospace;
+  background: #C7B299;
+  color: #707070;
+  display: inline-block;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+}
+
+h2 {
+  color: #6EF8C9;
+  font-weight: 900; /* Heavy */
+  font-size: 6em;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 2.25em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  padding: 0.5em 0 0.25em 0;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: 200; /* Thin */
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.5em 0;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid #10CFE8;
+  color: #44311E;
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+a:hover {
+  border-color: #C7B299;
+}
+
+[role=banner] > h1 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.summary {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+  padding: 15% 0;
+}
+.summary p:last-child {
+  border-top: 1px solid #C7B299;
+  margin-top: 1em;
+  padding-top: 1.5em;
+}
+.summary a {
+  color: black;
+}
+
+.preamble {
+  background: rgba(255, 255, 255, 0.9);
+  color: #44311E;
+  margin-left: -30%;
+  padding: 5% 5% 5% 30%;
+}
+
+.intro {
+  padding: 5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #C7B299;
+  padding: 5%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 85%;
+  color: #44311E;
+  background-color: #10CFE8;
+  margin: 0;
+  padding: 1em;
+}
+
+section {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+}
+
+.colors {
+  display: flex;
+  flex-flow: row wrap;
+}
+.colors > h3 {
+  width: 100%;
+  flex: 1 0 100%;
+}
+.colors > figure {
+  margin: 0;
+  flex: 1 1 25%;
+}
+
+.swatch {
+  width: 100%;
+  height: 100px;
+  border: 1px solid;
+}
+
+.color-h1 {
+  background-color: #707070;
+}
+
+.color-h2 {
+  background-color: #6EF8C9;
+}
+
+.color-h3 {
+  background-color: #A0D2E3;
+}
+
+.accent1 {
+  background-color: #C7B299;
+}
+
+.accent2 {
+  background-color: #10CFE8;
+}
+
+.accent3 {
+  background-color: #D4A127;
+}
+
+.accent4 {
+  background-color: #F45184;
+}
+
+.text-dark {
+  background-color: #44311E;
+}
+
+.element {
+  border: 1px solid;
+  margin: 0.5em;
+  padding: 1em;
+}
+
+.uppercase {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #44311E;
+}
+
+.uppercase-light {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: black;
+}
+
+/*# sourceMappingURL=style-pattern.css.map */
