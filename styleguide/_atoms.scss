@@ -61,6 +61,7 @@ h2 {
 }
 
 h3 {
+    color: $color-h3;
     font-size: 2.25em;
     letter-spacing: 1px;
     line-height: 1em;
@@ -85,7 +86,7 @@ a {
 }
 
 a:hover {
-    border-color: $color-accent1;
+    color: $color-accent4;
 }
 
 img {
