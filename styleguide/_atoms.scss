@@ -12,7 +12,7 @@
   flex-flow: $direction $wrap;
 }
 
-@mixin uppercase($color: $color-textdark) {
+@mixin uppercase($color: $color-body) {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $color;
@@ -23,51 +23,48 @@
   margin-top: 1em;
   padding-top: 1.5em;
 }
-// these styles here should describe how the atoms (elements) should appear most of the time.
-// They can be overridden at the molecule (block) as necessary
+
+// element styling
 h2,
 h3 {
   margin: 0;
 }
+
 h2, .font-h2 {
     font-family: $font-h2;
 }
+
 h3, .font-h3 {
     font-family: $font-h3;
 }
+
 h1 {
   font-family: $font-h1;
-  background: $color-accent1;
+  background: $color-accent3;
   color: $color-h1;
   display: inline-block;
-  font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
 }
+
 .font-h1 {
     font-family: $font-h1;
 }
+
 h2 {
   color: $color-h2;
-  font-weight: 900; /* Heavy */
   font-size: 6em;
   letter-spacing: 1px;
   line-height: 1em;
 }
+
 h3 {
   font-size: 2.25em;
-  font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
   padding: 0.5em 0 0.25em 0;
 }
-h4 {
-  font-size: 1.5em;
-  font-weight: 200; /* Thin */
-  letter-spacing: 1px;
-  line-height: 1em;
-  margin: 0.5em 0;
-}
+
 .font-body {
     font-family: $font-body;
 }
@@ -79,7 +76,7 @@ p {
 
 a {
   border-bottom: 1px solid $color-accent2;
-  color: $color-textdark;
+  color: $color-body;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
