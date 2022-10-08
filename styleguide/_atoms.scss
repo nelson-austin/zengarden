@@ -29,10 +29,10 @@ h2,
 h3 {
   margin: 0;
 }
-h2 {
+h2, .font-h2 {
     font-family: $font-h2;
 }
-h3 {
+h3, .font-h3 {
     font-family: $font-h3;
 }
 h1 {
@@ -43,6 +43,9 @@ h1 {
   font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
+}
+.font-h1 {
+    font-family: $font-h1;
 }
 h2 {
   color: $color-h2;
@@ -65,7 +68,9 @@ h4 {
   line-height: 1em;
   margin: 0.5em 0;
 }
-
+.font-body {
+    font-family: $font-body;
+}
 p {
   @include set-font(1em, 1.5em);
   padding: 0.5em 0;

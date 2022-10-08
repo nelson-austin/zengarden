@@ -4,22 +4,26 @@ h3 {
   margin: 0;
 }
 
-h2 {
-  font-family: "Cousine", monospace;
-}
-
-h3 {
+h2, .font-h2 {
   font-family: "Merriweather", serif;
 }
 
+h3, .font-h3 {
+  font-family: "Cousine", monospace;
+}
+
 h1 {
-  font-family: "Courier Prime", monospace;
+  font-family: "Playfair Display", serif;
   background: #C7B299;
   color: #707070;
   display: inline-block;
   font-weight: normal;
   margin-bottom: 1em;
   padding: 0.5em 1em;
+}
+
+.font-h1 {
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
@@ -46,8 +50,12 @@ h4 {
   margin: 0.5em 0;
 }
 
+.font-body {
+  font-family: "Courier Prime", monospace;
+}
+
 p {
-  font-family: "Playfair Display", serif;
+  font-family: "Courier Prime", monospace;
   font-size: 1em;
   line-height: 1.5em;
   padding: 0.5em 0;
@@ -69,14 +77,14 @@ a:hover {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: black;
+  color: #ffffff;
 }
 
 .summary {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: black;
+  color: #ffffff;
   padding: 15% 0;
 }
 .summary p:last-child {
@@ -85,7 +93,7 @@ a:hover {
   padding-top: 1.5em;
 }
 .summary a {
-  color: black;
+  color: #ffffff;
 }
 
 .preamble {
@@ -109,7 +117,7 @@ html {
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Courier Prime", monospace;
   font-size: 85%;
   color: #44311E;
   background-color: #10CFE8;
@@ -191,7 +199,7 @@ section {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: black;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */
