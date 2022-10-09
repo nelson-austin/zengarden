@@ -7,23 +7,6 @@
     line-height: $line-height;
 }
 
-@mixin set-flex($direction: row, $wrap: wrap) {
-    display: flex;
-    flex-flow: $direction $wrap;
-}
-
-@mixin uppercase($color: $color-body) {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: $color;
-}
-
-@mixin divider($color: $color-accent1) {
-    border-top: 1px solid $color;
-    margin-top: 1em;
-    padding-top: 1.5em;
-}
-
 // element styling
 h2,
 h3 {
@@ -73,7 +56,9 @@ h3 {
 }
 
 p {
-    @include set-font(1em, 1.5em);
+    font-family: $font-body;
+    font-size: 1em;
+    line-height: 1.5em;
     padding: 0.5em 0;
     margin: 0;
 }
