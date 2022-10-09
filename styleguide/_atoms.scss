@@ -5,6 +5,23 @@
     list-style: none;
 }
 
+@mixin unordered-list() {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin design-triangle-author() {
+    font-size: .9rem;
+    border-bottom: none;
+}
+
+@mixin design-triangle-name() {
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: none;
+}
+
 // element styling
 img {
     max-width: 75%;
@@ -60,4 +77,9 @@ a {
 
 a:hover {
     color: $color-accent4;
+    border-bottom: 1px solid $color-accent4;
+}
+
+ul {
+    @include unordered-list();
 }
