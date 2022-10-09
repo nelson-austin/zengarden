@@ -1,10 +1,8 @@
 @use 'variables' as *;
 
 // mixins to take care of repeated patterns.
-@mixin set-font($size: 1em, $line-height: normal, $font: $font-body) {
-    font-family: $font;
-    font-size: $size;
-    line-height: $line-height;
+@mixin lists {
+    list-style: none;
 }
 
 // element styling
