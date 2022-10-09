@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
-h2,
-h3 {
-  margin: 0;
+img {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h2,
@@ -14,42 +16,31 @@ h3,
   font-family: "Cousine", monospace;
 }
 
-h1 {
+h1,
+.font-h1 {
   font-family: "Playfair Display", serif;
+}
+
+h1 {
   background: #D4A127;
   color: #707070;
   display: inline-block;
-  margin-bottom: 1em;
   padding: 0.5em 1em;
-}
-
-.font-h1 {
-  font-family: "Playfair Display", serif;
 }
 
 h2 {
   color: #C7B299;
   font-size: 6em;
-  letter-spacing: 1px;
-  line-height: 1em;
 }
 
 h3 {
   color: #A0D2E3;
   font-size: 2.25em;
-  letter-spacing: 1px;
-  line-height: 1em;
   padding: 0.5em 0 0.25em 0;
-}
-
-.font-body {
-  font-family: "Courier Prime", monospace;
 }
 
 p {
   font-family: "Courier Prime", monospace;
-  font-size: 1em;
-  line-height: 1.5em;
   padding: 0.5em 0;
   margin: 0;
 }
@@ -58,22 +49,10 @@ a {
   border-bottom: 1px solid #10CFE8;
   color: #44311E;
   text-decoration: none;
-  transition: border-color 0.2s ease-in-out;
 }
 
 a:hover {
   color: #F45184;
-}
-
-img {
-  max-width: 75%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.intro {
-  padding: 5%;
 }
 
 * {
@@ -175,6 +154,15 @@ h4 {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #F45184;
+}
+
+.font-body {
+  font-family: "Courier Prime", monospace;
+}
+
+h2,
+h3 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */
