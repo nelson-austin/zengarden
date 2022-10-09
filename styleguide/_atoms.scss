@@ -6,9 +6,11 @@
 }
 
 // element styling
-h2,
-h3 {
-    margin: 0;
+img {
+    max-width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2,
@@ -21,42 +23,31 @@ h3,
     font-family: $font-h3;
 }
 
-h1 {
+h1,
+.font-h1 {
     font-family: $font-h1;
+}
+
+h1 {
     background: $color-accent3;
     color: $color-h1;
     display: inline-block;
-    margin-bottom: 1em;
     padding: 0.5em 1em;
-}
-
-.font-h1 {
-    font-family: $font-h1;
 }
 
 h2 {
     color: $color-h2;
     font-size: 6em;
-    letter-spacing: 1px;
-    line-height: 1em;
 }
 
 h3 {
     color: $color-h3;
     font-size: 2.25em;
-    letter-spacing: 1px;
-    line-height: 1em;
     padding: 0.5em 0 0.25em 0;
-}
-
-.font-body {
-    font-family: $font-body;
 }
 
 p {
     font-family: $font-body;
-    font-size: 1em;
-    line-height: 1.5em;
     padding: 0.5em 0;
     margin: 0;
 }
@@ -65,16 +56,8 @@ a {
     border-bottom: 1px solid $color-accent2;
     color: $color-body;
     text-decoration: none;
-    transition: border-color 0.2s ease-in-out;
 }
 
 a:hover {
     color: $color-accent4;
-}
-
-img {
-    max-width: 75%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }

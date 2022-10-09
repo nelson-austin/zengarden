@@ -97,3 +97,12 @@ h4 {
   @include uppercase($color-textlight);
   background-color: $color-accent4;
 }
+
+.font-body {
+  font-family: $font-body;
+}
+
+h2,
+h3 {
+    margin: 0;
+}
