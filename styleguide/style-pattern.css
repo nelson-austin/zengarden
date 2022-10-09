@@ -63,6 +63,7 @@ a {
 
 a:hover {
   color: #F45184;
+  border-bottom: 1px solid #F45184;
 }
 
 img {
@@ -70,6 +71,12 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .intro {
@@ -175,6 +182,16 @@ h4 {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #F45184;
+}
+
+.design-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  color: orange;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */

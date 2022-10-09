@@ -24,6 +24,21 @@
     padding-top: 1.5em;
 }
 
+@mixin unordered-list() {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin design-triangle-author() {
+    font-size: .9rem;
+}
+
+@mixin design-triangle-name() {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
 // element styling
 h2,
 h3 {
@@ -87,6 +102,7 @@ a {
 
 a:hover {
     color: $color-accent4;
+    border-bottom: 1px solid $color-accent4;
 }
 
 img {
@@ -94,4 +110,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+ul {
+    @include unordered-list();
 }

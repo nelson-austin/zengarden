@@ -90,3 +90,11 @@
     @include atoms.uppercase($color-textlight);
     background-color: $color-accent4;
   }
+
+  .design-name {
+    @include atoms.design-triangle-name;
+  }
+
+  .author-name {
+    @include atoms.design-triangle-author;
+  }
