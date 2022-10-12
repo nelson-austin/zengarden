@@ -8,17 +8,18 @@ img {
 
 h2,
 .font-h2 {
-  font-family: "Merriweather", serif;
+  font-family: Georgia, serif;
 }
 
 h3,
 .font-h3 {
-  font-family: "Cousine", monospace;
+  font-family: Georgia, serif;
+  text-transform: capitalize;
 }
 
 h1,
 .font-h1 {
-  font-family: "Playfair Display", serif;
+  font-family: Georgia, serif;
 }
 
 h1 {
@@ -40,7 +41,7 @@ h3 {
 }
 
 p {
-  font-family: "Courier Prime", monospace;
+  font-family: "proxima nova", monospace;
   padding: 0.5em 0;
   margin: 0;
 }
@@ -72,7 +73,7 @@ html {
 }
 
 body {
-  font-family: "Courier Prime", monospace;
+  font-family: "proxima nova", monospace;
   font-size: 85%;
   color: #44311E;
   background-color: #10CFE8;
@@ -164,7 +165,7 @@ h4 {
 }
 
 .font-body {
-  font-family: "Courier Prime", monospace;
+  font-family: "proxima nova", monospace;
 }
 
 h2,
