@@ -38,6 +38,7 @@ h2,
 h3,
 .font-h3 {
     font-family: $font-h3;
+    text-transform: capitalize;
 }
 
 h1,
@@ -58,7 +59,7 @@ h2 {
 }
 
 h3 {
-    color: $color-h3;
+    color: $color-h2;
     font-size: 2.25em;
     padding: 0.5em 0 0.25em 0;
 }
