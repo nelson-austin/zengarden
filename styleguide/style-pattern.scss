@@ -5,101 +5,112 @@
 @use 'organisms';
 
 @mixin uppercase($color: $color-body) {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: $color;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color;
 }
 
 * {
     box-sizing: border-box;
-  }
+}
+
 html {
-  background-color: $color-accent1;
-  padding: 5%;
+    background-color: $color-accent3;
+    padding: 5%;
 }
 
 body {
-  font-family: $font-body;
-  font-size: 85%;
-  color: $color-body;
-  background-color: $color-accent2;
-  margin: 0;
-  padding: 1em;
+    font-family: $font-body;
+    font-size: 85%;
+    color: $color-body;
+    background-color: $color-accent2;
+    margin: 0;
+    padding: 1em;
 }
 
 section {
-  background-color: white;
-  padding: 1em;
-  margin: 1em;
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
 }
 
 .colors {
-  display: flex;
-  flex-flow: row wrap;
-  > h3 {
-    width: 100%;
-    flex: 1 0 100%;
-  }
-  > figure {
-    margin: 0;
-    flex: 1 1 25%;
-  }
+    display: flex;
+    flex-flow: row wrap;
+
+    >h3 {
+        width: 100%;
+        flex: 1 0 100%;
+    }
+
+    >figure {
+        margin: 0;
+        flex: 1 1 25%;
+    }
 }
 
 h4 {
-  font-size: 1.5em;
-  letter-spacing: 1px;
-  line-height: 1em;
-  margin: 0.5em 0;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin: 0.5em 0;
 }
 
 .swatch {
-  width: 100%;
-  height: 100px;
-  border: 1px solid;
+    width: 100%;
+    height: 100px;
+    border: 1px solid;
 }
+
 .color-h1 {
-  background-color: $color-h1;
+    background-color: $color-h1;
 }
+
 .color-h2 {
-  background-color: $color-h2;
+    background-color: $color-h2;
 }
-.color-h3 {
-  background-color: $color-h3;
-}
+
 .accent1 {
-  background-color: $color-accent1;
+    background-color: $color-accent1;
 }
+
 .accent2 {
-  background-color: $color-accent2;
+    background-color: $color-accent2;
 }
+
 .accent3 {
-  background-color: $color-accent3;
+    background-color: $color-accent3;
 }
+
 .accent4 {
-  background-color: $color-accent4;
+    background-color: $color-accent4;
 }
-.textdark {
-  background-color: $color-body;
+
+.accent5 {
+    background-color: $color-accent5;
+}
+
+.accent6 {
+    background-color: $color-accent6;
 }
 
 .element {
-  border: 1px solid;
-  margin: 0.5em;
-  padding: 1em;
+    border: 1px solid;
+    margin: 0.5em;
+    padding: 1em;
 }
 
 .uppercase {
-  @include uppercase;
+    @include uppercase;
 }
 
 .uppercase-light {
-  @include uppercase($color-textlight);
-  background-color: $color-accent4;
+    @include uppercase($color-textlight);
+    background-color: $color-accent4;
 }
 
 .font-body {
-  font-family: $font-body;
+    font-family: $font-body;
 }
 
 h2,
@@ -109,8 +120,8 @@ h3 {
 
 .design-name {
     @include atoms.design-triangle-name;
-  }
+}
 
-  .author-name {
+.author-name {
     @include atoms.design-triangle-author;
-  }
+}

@@ -23,19 +23,19 @@ h1,
 }
 
 h1 {
-  background: #D4A127;
-  color: #707070;
+  background: #9CBDAD;
+  color: black;
   display: inline-block;
   padding: 0.5em 1em;
 }
 
 h2 {
-  color: #5B4934;
+  color: #82510A;
   font-size: 6em;
 }
 
 h3 {
-  color: #A0D2E3;
+  color: #82510A;
   font-size: 2.25em;
   padding: 0.5em 0 0.25em 0;
 }
@@ -47,14 +47,14 @@ p {
 }
 
 a {
-  border-bottom: 1px solid #10CFE8;
-  color: #44311E;
+  border-bottom: 1px solid #008AA2;
+  color: #11B7A9;
   text-decoration: none;
 }
 
 a:hover {
-  color: #F45184;
-  border-bottom: 1px solid #F45184;
+  color: #F77879;
+  border-bottom: 1px solid #F77879;
 }
 
 ul {
@@ -68,15 +68,15 @@ ul {
 }
 
 html {
-  background-color: #6EF8C9;
+  background-color: #9CBDAD;
   padding: 5%;
 }
 
 body {
   font-family: "proxima nova", monospace;
   font-size: 85%;
-  color: #44311E;
-  background-color: #10CFE8;
+  color: #11B7A9;
+  background-color: #008AA2;
   margin: 0;
   padding: 1em;
 }
@@ -114,35 +114,35 @@ h4 {
 }
 
 .color-h1 {
-  background-color: #707070;
+  background-color: black;
 }
 
 .color-h2 {
-  background-color: #5B4934;
-}
-
-.color-h3 {
-  background-color: #A0D2E3;
+  background-color: #82510A;
 }
 
 .accent1 {
-  background-color: #6EF8C9;
+  background-color: #FF5C35;
 }
 
 .accent2 {
-  background-color: #10CFE8;
+  background-color: #008AA2;
 }
 
 .accent3 {
-  background-color: #D4A127;
+  background-color: #9CBDAD;
 }
 
 .accent4 {
-  background-color: #F45184;
+  background-color: #F77879;
 }
 
-.textdark {
-  background-color: #44311E;
+.accent5 {
+  background-color: #EF8700;
+}
+
+.accent6 {
+  background-color: #DA0000;
 }
 
 .element {
@@ -154,14 +154,14 @@ h4 {
 .uppercase {
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #44311E;
+  color: #11B7A9;
 }
 
 .uppercase-light {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #FFFFFF;
-  background-color: #F45184;
+  background-color: #F77879;
 }
 
 .font-body {
