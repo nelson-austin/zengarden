@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
+img {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2,
+.font-h2 {
+  font-family: Georgia, serif;
+}
+
+h3,
+.font-h3 {
+  font-family: Georgia, serif;
+  text-transform: capitalize;
+}
+
+h1,
+.font-h1 {
+  font-family: Georgia, serif;
+}
+
+h1 {
+  background: #9CBDAD;
+  color: black;
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+
+h2 {
+  color: #82510A;
+  font-size: 6em;
+}
+
+h3 {
+  color: #82510A;
+  font-size: 2.25em;
+  padding: 0.5em 0 0.25em 0;
+}
+
+p {
+  font-family: "proxima nova", monospace;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+a {
+  border-bottom: 1px solid #008AA2;
+  color: #11B7A9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F77879;
+  border-bottom: 1px solid #F77879;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=style-pattern.css.map */
