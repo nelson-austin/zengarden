@@ -3,3 +3,47 @@
 @use 'atoms';
 @use 'molecules';
 @use 'organisms';
+
+// media breakpoints
+@mixin breakpoint($break) {
+    @if $break ==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $break ==medium {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+
+    @else if $break ==small {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else {
+        @media ($break) {
+            @content;
+        }
+    }
+}
+
+.summary::after {
+    content: '';
+    background-image: url(seagull.png);
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+#css-zen-garden {
+    background-image: url(beach_background.jpg), url(background_sand.png);
+    background-color: $color-accent3;
+    background-position: center;
+    background-repeat: no-repeat repeat;
+    background-size: cover;
+    position: relative;
+}

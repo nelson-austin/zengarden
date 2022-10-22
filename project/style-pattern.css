@@ -6,32 +6,24 @@ img {
   margin-right: auto;
 }
 
-h2,
-.font-h2 {
+h2 {
   font-family: Georgia, serif;
 }
 
-h3,
-.font-h3 {
+h3 {
   font-family: Georgia, serif;
   text-transform: capitalize;
 }
 
-h1,
-.font-h1 {
-  font-family: Georgia, serif;
-}
-
 h1 {
-  background: #9CBDAD;
+  font-family: Georgia, serif;
   color: black;
-  display: inline-block;
-  padding: 0.5em 1em;
+  font-size: 7rem;
 }
 
 h2 {
   color: #82510A;
-  font-size: 6em;
+  font-size: 3em;
 }
 
 h3 {
@@ -44,6 +36,7 @@ p {
   font-family: "proxima nova", monospace;
   padding: 0.5em 0;
   margin: 0;
+  color: #11B7A9;
 }
 
 a {
@@ -61,6 +54,46 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.explanation, .participation, .benefits, .requirements {
+  display: block;
+}
+.explanation::before, .participation::before, .benefits::before, .requirements::before {
+  content: "";
+  background-image: url(red_glasses.png);
+  background-repeat: no-repeat;
+  background-size: 65px 30px;
+  width: 65px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+}
+.explanation::after, .participation::after, .benefits::after, .requirements::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  clear: both;
+  background-color: #FF5C35;
+}
+
+.summary::after {
+  content: "";
+  background-image: url(seagull.png);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#css-zen-garden {
+  background-image: url(beach_background.jpg), url(background_sand.png);
+  background-color: #9CBDAD;
+  background-position: center;
+  background-repeat: no-repeat repeat;
+  background-size: cover;
+  position: relative;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */
