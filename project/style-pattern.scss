@@ -5,13 +5,29 @@
 @use 'organisms';
 
 h1::after {
-    content: '';
-    background-image: url(seagull.png);
-    position: absolute;
-    top:0px;
-    left:0px;
-    height: 200px;
-    z-index: 100;
+    content: "";
+  background-image: url(yellow_umbrella_with_chairs.png);
+  background-repeat: no-repeat;
+  background-size: 10rem 13rem;
+  width: 10rem;
+  height: 13rem;
+  display: inline-block;
+  position: absolute;
+  right: -4rem;
+  top: 6rem;
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+
+  @include atoms.breakpoint(large) {
+    background-size: 50rem 65rem;
+    width: 50rem;
+    height: 65rem;
+    right: -10rem;
+    top: 25rem;
+  }
 }
 
 #css-zen-garden {
