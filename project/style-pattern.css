@@ -88,11 +88,9 @@ ul {
 }
 
 #css-zen-garden {
-  background-image: url(beach_background.jpg), url(background_sand.png);
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat;
   background-color: #9CBDAD;
-  background-position: center;
-  background-repeat: no-repeat repeat;
-  background-size: cover;
+  background-size: 100%;
   position: relative;
 }
 
