@@ -43,6 +43,36 @@
     position: absolute;
 }
 
+// media breakpoints
+$break-large: 800px;
+$break-small: 200px;
+
+@mixin breakpoint($break) {
+    @if $break ==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $break ==medium {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+
+    @else if $break ==small {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else {
+        @media ($break) {
+            @content;
+        }
+    }
+}
+
 // element styling
 img {
     max-width: 75%;
@@ -63,7 +93,15 @@ h3 {
 h1 {
     font-family: $font-h1;
     color: $color-h1;
-    font-size: 7rem;
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+    @include breakpoint(large) {
+        font-size: 7rem;
+        padding-top: 10rem;
+        padding-bottom: 50rem;
+    }
 }
 
 h2 {

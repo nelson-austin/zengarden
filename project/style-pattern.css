@@ -18,7 +18,16 @@ h3 {
 h1 {
   font-family: Georgia, serif;
   color: black;
-  font-size: 7rem;
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 50rem;
+  }
 }
 
 h2 {
@@ -79,12 +88,14 @@ ul {
   background-color: #FF5C35;
 }
 
-.summary::after {
+h1::after {
   content: "";
   background-image: url(seagull.png);
   position: absolute;
   top: 0px;
   left: 0px;
+  height: 200px;
+  z-index: 100;
 }
 
 #css-zen-garden {

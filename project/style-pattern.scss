@@ -4,39 +4,14 @@
 @use 'molecules';
 @use 'organisms';
 
-// media breakpoints
-@mixin breakpoint($break) {
-    @if $break ==large {
-        @media (min-width: $break-large) {
-            @content;
-        }
-    }
-
-    @else if $break ==medium {
-        @media (min-width: $break-medium) {
-            @content;
-        }
-    }
-
-    @else if $break ==small {
-        @media (min-width: $break-small) {
-            @content;
-        }
-    }
-
-    @else {
-        @media ($break) {
-            @content;
-        }
-    }
-}
-
-.summary::after {
+h1::after {
     content: '';
     background-image: url(seagull.png);
     position: absolute;
     top:0px;
     left:0px;
+    height: 200px;
+    z-index: 100;
 }
 
 #css-zen-garden {
@@ -44,4 +19,8 @@
     background-color: $color-accent3;
     background-size: 100%;
     position: relative;
+
+    @include atoms.breakpoint(small) {
+        
+    }
 }
