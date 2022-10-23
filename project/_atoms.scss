@@ -22,6 +22,57 @@
     border-bottom: none;
 }
 
+@mixin red-line-afterwards() {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    display: block;
+    clear: both;
+    background-color: $color-accent1;
+}
+
+@mixin sunglasses() {
+    content: "";
+    background-image: url(red_glasses.png);
+    background-repeat: no-repeat;
+    background-size: 65px 30px;
+    width: 65px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+}
+
+// media breakpoints
+$break-large: 800px;
+$break-small: 200px;
+
+@mixin breakpoint($break) {
+    @if $break ==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $break ==medium {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+
+    @else if $break ==small {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else {
+        @media ($break) {
+            @content;
+        }
+    }
+}
+
 // element styling
 img {
     max-width: 75%;
@@ -30,32 +81,32 @@ img {
     margin-right: auto;
 }
 
-h2,
-.font-h2 {
+h2 {
     font-family: $font-h2;
 }
 
-h3,
-.font-h3 {
+h3 {
     font-family: $font-h3;
     text-transform: capitalize;
 }
 
-h1,
-.font-h1 {
-    font-family: $font-h1;
-}
-
 h1 {
-    background: $color-accent3;
+    font-family: $font-h1;
     color: $color-h1;
-    display: inline-block;
-    padding: 0.5em 1em;
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+    @include breakpoint(large) {
+        font-size: 7rem;
+        padding-top: 10rem;
+        padding-bottom: 50rem;
+    }
 }
 
 h2 {
     color: $color-h2;
-    font-size: 6em;
+    font-size: 3em;
 }
 
 h3 {
@@ -68,6 +119,7 @@ p {
     font-family: $font-body;
     padding: 0.5em 0;
     margin: 0;
+    color: $color-body;
 }
 
 a {
@@ -83,4 +135,14 @@ a:hover {
 
 ul {
     @include unordered-list();
+}
+
+.explanation, .participation, .benefits, .requirements {
+    display: block;
+    &::before {
+        @include sunglasses();
+    }
+    &::after {
+        @include red-line-afterwards();
+    }
 }

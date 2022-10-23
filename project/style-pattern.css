@@ -6,32 +6,33 @@ img {
   margin-right: auto;
 }
 
-h2,
-.font-h2 {
+h2 {
   font-family: Georgia, serif;
 }
 
-h3,
-.font-h3 {
+h3 {
   font-family: Georgia, serif;
   text-transform: capitalize;
 }
 
-h1,
-.font-h1 {
-  font-family: Georgia, serif;
-}
-
 h1 {
-  background: #9CBDAD;
+  font-family: Georgia, serif;
   color: black;
-  display: inline-block;
-  padding: 0.5em 1em;
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 50rem;
+  }
 }
 
 h2 {
   color: #82510A;
-  font-size: 6em;
+  font-size: 3em;
 }
 
 h3 {
@@ -44,6 +45,7 @@ p {
   font-family: "proxima nova", monospace;
   padding: 0.5em 0;
   margin: 0;
+  color: #11B7A9;
 }
 
 a {
@@ -61,6 +63,63 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.explanation, .participation, .benefits, .requirements {
+  display: block;
+}
+.explanation::before, .participation::before, .benefits::before, .requirements::before {
+  content: "";
+  background-image: url(red_glasses.png);
+  background-repeat: no-repeat;
+  background-size: 65px 30px;
+  width: 65px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+}
+.explanation::after, .participation::after, .benefits::after, .requirements::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  clear: both;
+  background-color: #FF5C35;
+}
+
+h1::after {
+  content: "";
+  background-image: url(yellow_umbrella_with_chairs.png);
+  background-repeat: no-repeat;
+  background-size: 10rem 13rem;
+  width: 10rem;
+  height: 13rem;
+  display: inline-block;
+  position: absolute;
+  right: -4rem;
+  top: 6rem;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (min-width: 800px) {
+  h1::after {
+    background-size: 50rem 65rem;
+    width: 50rem;
+    height: 65rem;
+    right: -10rem;
+    top: 25rem;
+  }
+}
+
+#css-zen-garden {
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat;
+  background-color: #9CBDAD;
+  background-size: 100%;
+  position: relative;
 }
 
 /*# sourceMappingURL=style-pattern.css.map */
