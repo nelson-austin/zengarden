@@ -1,0 +1,35 @@
+MOBILE
+  **AUSTIN**
+- Instead of repeating sand, transition to sandy/tan color
+- Depending on tan color, choose new text color as needed
+
+  **DEBBIE**
+- Fix positioning of sunglasses (to the left of h3)
+- Add animation for sunglasses
+
+  **KAYLEE**
+- Add in 1/2/3 for requirements section (no image)
+
+  **KAYLEE**
+- Format circle links (HTML, CSS, etc.); add color/shape, as well as hr on either side
+
+  **DEBBIE**
+- Umbrellas for "Select A Design"
+  **AUSTIN**
+- two-wide grid
+
+  **DEBBIE**
+- background/colors for Archives & Resources
+
+DESKTOP
+
+  **AUSTIN**
+- add in boardwalk
+
+  **AUSTIN**
+- add in 3(?)-column grid for main content
+- grid for Design
+- grid for Archive/Resources
+
+  **AUSTIN**
+- add seagull/sign image
