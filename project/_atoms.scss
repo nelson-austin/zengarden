@@ -83,11 +83,16 @@ img {
 
 h2 {
     font-family: $font-h2;
+    color: $color-h2;
+    font-size: 3em;
 }
 
 h3 {
     font-family: $font-h3;
     text-transform: capitalize;
+    color: $color-h2;
+    font-size: 2.25em;
+    padding: 0.5em 0 0.25em 0;
 }
 
 h1 {
@@ -102,17 +107,6 @@ h1 {
         padding-top: 10rem;
         padding-bottom: 50rem;
     }
-}
-
-h2 {
-    color: $color-h2;
-    font-size: 3em;
-}
-
-h3 {
-    color: $color-h2;
-    font-size: 2.25em;
-    padding: 0.5em 0 0.25em 0;
 }
 
 p {
