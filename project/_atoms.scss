@@ -34,6 +34,8 @@
 
 @mixin sunglasses() {
     content: "";
+    /* @Debbie 
+    delete position absolute */
     background-image: url(red_glasses.png);
     background-repeat: no-repeat;
     background-size: 65px 30px;
@@ -41,6 +43,18 @@
     height: 30px;
     display: inline-block;
     position: absolute;
+}
+
+@mixin circle($color) {
+    height: 4rem;
+    width: 4rem;
+    background-color: $color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-h1;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
 // media breakpoints
@@ -140,3 +154,43 @@ ul {
         @include red-line-afterwards();
     }
 }
+
+/* Footer CSS/Git/etc. */
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(large) {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+footer a:first-child {
+    @include circle($color-accent1);
+}
+
+footer a:nth-child(2) {
+    @include circle($color-accent2);
+}
+
+footer a:nth-child(3) {
+    @include circle($color-accent3);
+}
+
+footer a:nth-child(4) {
+    @include circle($color-accent4);
+}
+
+footer a:nth-child(5) {
+    @include circle($color-accent5);
+}
+
+/* @Debbie, I'd recommend putting the sunglasses before the h3,
+   so delete the before above (lines 142-144), and replace 
+   it with this below:
+
+.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+    display: block;
+    &::before {
+        @include sunglasses();
+    } } */
