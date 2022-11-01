@@ -57,9 +57,18 @@
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+@mixin requirement-number($p-number, $color) {
+    content: "#{$p-number}";
+    font-size: 4rem;
+    font-weight: 800;
+    color: $color;
+    position: absolute;
+    margin-left: -3rem;
+}
+
 // media breakpoints
 $break-large: 800px;
-$break-small: 200px;
+$break-small: 400px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
@@ -69,13 +78,13 @@ $break-small: 200px;
     }
 
     @else if $break ==medium {
-        @media (min-width: $break-medium) {
+        @media (max-width: $break-medium) {
             @content;
         }
     }
 
     @else if $break ==small {
-        @media (min-width: $break-small) {
+        @media (max-width: $break-small) {
             @content;
         }
     }
@@ -194,3 +203,26 @@ footer a:nth-child(5) {
     &::before {
         @include sunglasses();
     } } */
+
+/* NUMBERS BY REQUIREMENT PARAGRAPH */
+.requirements > p {
+    @include breakpoint(small) {
+    margin-left: 3rem;
+
+    &:first-of-type::before {
+        @include requirement-number(1, $color-accent2);
+        }
+
+    &:nth-of-type(2)::before {
+        @include requirement-number(2, $color-accent1);
+        }
+
+    &:nth-of-type(3)::before {
+        @include requirement-number(3, $color-accent4);
+        }
+
+    &:nth-of-type(4)::before {
+        @include requirement-number(4, $color-accent5);
+        }
+    }
+}
