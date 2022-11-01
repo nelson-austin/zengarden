@@ -165,10 +165,10 @@ footer a:nth-child(5) {
     &::before {
         @include sunglasses();
     } } */
+/* NUMBERS BY REQUIREMENT PARAGRAPH */
 .requirements > p {
   margin-left: 3rem;
 }
-
 .requirements > p:first-of-type::before {
   content: "1";
   font-size: 4rem;
@@ -177,7 +177,6 @@ footer a:nth-child(5) {
   position: absolute;
   margin-left: -3rem;
 }
-
 .requirements > p:nth-of-type(2)::before {
   content: "2";
   font-size: 4rem;
@@ -186,7 +185,6 @@ footer a:nth-child(5) {
   position: absolute;
   margin-left: -3rem;
 }
-
 .requirements > p:nth-of-type(3)::before {
   content: "3";
   font-size: 4rem;
@@ -195,7 +193,6 @@ footer a:nth-child(5) {
   position: absolute;
   margin-left: -3rem;
 }
-
 .requirements > p:nth-of-type(4)::before {
   content: "4";
   font-size: 4rem;
