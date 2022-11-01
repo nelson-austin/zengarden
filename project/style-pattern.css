@@ -204,6 +204,34 @@ footer a:nth-child(5) {
   }
 }
 
+@media (min-width: 800px) {
+  footer {
+    position: relative;
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    width: 42rem;
+    height: 2px;
+    display: block;
+    clear: both;
+    left: 0px;
+    top: 50%;
+    background-color: #FF5C35;
+  }
+  footer::after {
+    content: "";
+    position: absolute;
+    width: 42rem;
+    height: 2px;
+    display: block;
+    clear: both;
+    right: 0px;
+    top: 50%;
+    background-color: #FF5C35;
+  }
+}
+
 h1::after {
   content: "";
   background-image: url(yellow_umbrella_with_chairs.png);
