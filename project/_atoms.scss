@@ -72,13 +72,13 @@ $break-small: 200px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
-        @media (min-width: $break-large) {
+        @media (max-width: $break-large) {
             @content;
         }
     }
 
     @else if $break ==medium {
-        @media (min-width: $break-medium) {
+        @media (max-width: $break-medium) {
             @content;
         }
     }
@@ -206,12 +206,50 @@ footer a:nth-child(5) {
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
 
+/* .requirements > p {
+    margin-left: 3rem;
+
+    &:first-of-type::before {
+        @include requirement-number(1, $color-accent2);
+
+        // get rid of numbers for large screen
+        @include breakpoint(large) {
+            @include requirement-number("", $color-accent2);
+        }
+        }
+
+    &:nth-of-type(2)::before {
+        @include requirement-number(2, $color-accent1);
+        
+        @include breakpoint(large) {
+            @include requirement-number("", $color-accent2);
+        }
+        }
+
+    &:nth-of-type(3)::before {
+        @include requirement-number(3, $color-accent4);
+        
+        @include breakpoint(large) {
+            @include requirement-number("", $color-accent2);
+        }
+        }
+
+    &:nth-of-type(4)::before {
+        @include requirement-number(4, $color-accent5);
+        
+        @include breakpoint(large) {
+            @include requirement-number("", $color-accent2);
+        }
+        }
+} */
+
 .requirements > p {
     margin-left: 3rem;
 
     &:first-of-type::before {
         @include requirement-number(1, $color-accent2);
 
+        // get rid of numbers for large screen
         @include breakpoint(large) {
             @include requirement-number("", $color-accent2);
         }
