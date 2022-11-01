@@ -32,6 +32,18 @@
     background-color: $color-accent1;
 }
 
+@mixin red-line-afterwards-footer($side) {
+    content:'';
+        position: absolute;
+        width: 42rem;
+        height: 2px;
+        display: block;
+        clear: both;
+        #{$side}: 0px;
+        top: 50%;
+        background-color: $color-accent1;
+}
+
 @mixin sunglasses() {
     content: "";
     /* @Debbie 
@@ -225,4 +237,18 @@ footer a:nth-child(5) {
         @include requirement-number(4, $color-accent5);
         }
     }
+}
+
+footer {
+    @include breakpoint(large) {
+        position: relative;
+        
+        &::before {
+            @include red-line-afterwards-footer(left);
+        }
+
+        &::after {
+            @include red-line-afterwards-footer(right);
+        }
+}
 }
