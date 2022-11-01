@@ -57,6 +57,15 @@
     box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+@mixin requirement-number($p-number, $color) {
+    content: "#{$p-number}";
+    font-size: 4rem;
+    font-weight: 800;
+    color: $color;
+    position: absolute;
+    margin-left: -3rem;
+}
+
 // media breakpoints
 $break-large: 800px;
 $break-small: 200px;
@@ -194,3 +203,23 @@ footer a:nth-child(5) {
     &::before {
         @include sunglasses();
     } } */
+
+.requirements > p {
+    margin-left: 3rem;
+}
+
+.requirements > p:first-of-type::before {
+    @include requirement-number(1, $color-accent2);
+    }
+
+.requirements > p:nth-of-type(2)::before {
+    @include requirement-number(2, $color-accent1);
+    }
+
+.requirements > p:nth-of-type(3)::before {
+    @include requirement-number(3, $color-accent4);
+    }
+
+.requirements > p:nth-of-type(4)::before {
+    @include requirement-number(4, $color-accent5);
+    }
