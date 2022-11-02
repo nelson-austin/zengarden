@@ -62,18 +62,6 @@ ul {
 .explanation, .participation, .benefits, .requirements {
   display: block;
 }
-.explanation::before, .participation::before, .benefits::before, .requirements::before {
-  content: "";
-  /* @Debbie 
-  delete position absolute */
-  background-image: url(red_glasses.png);
-  background-repeat: no-repeat;
-  background-size: 65px 30px;
-  width: 65px;
-  height: 30px;
-  display: inline-block;
-  position: absolute;
-}
 .explanation::after, .participation::after, .benefits::after, .requirements::after {
   content: "";
   position: absolute;
@@ -156,15 +144,19 @@ footer a:nth-child(5) {
   box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-/* @Debbie, I'd recommend putting the sunglasses before the h3,
-   so delete the before above (lines 142-144), and replace 
-   it with this below:
-
 .explanation h3, .participation h3, .benefits h3, .requirements h3 {
-    display: block;
-    &::before {
-        @include sunglasses();
-    } } */
+  display: block;
+}
+.explanation h3::before, .participation h3::before, .benefits h3::before, .requirements h3::before {
+  content: "";
+  background-image: url(red_glasses.png);
+  background-repeat: no-repeat;
+  background-size: 65px 30px;
+  width: 65px;
+  height: 30px;
+  display: inline-block;
+}
+
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
 @media (max-width: 400px) {
   .requirements > p {
