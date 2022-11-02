@@ -1,194 +1,270 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
+img {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+h2 {
+  font-family: Georgia, serif;
+  color: #82510A;
+  font-size: 3em;
+}
 
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+h3 {
+  font-family: Georgia, serif;
+  text-transform: capitalize;
+  color: #82510A;
+  font-size: 2.25em;
+  padding: 0.5em 0 0.25em 0;
+}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+h1 {
+  font-family: Georgia, serif;
+  color: black;
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 50rem;
+  }
+}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+p {
+  font-family: "proxima nova", monospace;
+  padding: 0.5em 0;
+  margin: 0;
+  color: #11B7A9;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+a {
+  border-bottom: 1px solid #008AA2;
+  color: #11B7A9;
+  text-decoration: none;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+a:hover {
+  color: #F77879;
+  border-bottom: 1px solid #F77879;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
+.explanation, .participation, .benefits, .requirements {
+  display: block;
+}
+.explanation::before, .participation::before, .benefits::before, .requirements::before {
+  content: "";
+  /* @Debbie 
+  delete position absolute */
+  background-image: url(red_glasses.png);
+  background-repeat: no-repeat;
+  background-size: 65px 30px;
+  width: 65px;
+  height: 30px;
+  display: inline-block;
+  position: absolute;
+}
+.explanation::after, .participation::after, .benefits::after, .requirements::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  clear: both;
+  background-color: #FF5C35;
+}
 
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+/* Footer CSS/Git/etc. */
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 800px) {
+  footer {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 
+footer a:first-child {
+  height: 4rem;
+  width: 4rem;
+  background-color: #FF5C35;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+footer a:nth-child(2) {
+  height: 4rem;
+  width: 4rem;
+  background-color: #008AA2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+footer a:nth-child(3) {
+  height: 4rem;
+  width: 4rem;
+  background-color: #9CBDAD;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+footer a:nth-child(4) {
+  height: 4rem;
+  width: 4rem;
+  background-color: #F77879;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+footer a:nth-child(5) {
+  height: 4rem;
+  width: 4rem;
+  background-color: #EF8700;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+/* @Debbie, I'd recommend putting the sunglasses before the h3,
+   so delete the before above (lines 142-144), and replace 
+   it with this below:
+
+.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+    display: block;
+    &::before {
+        @include sunglasses();
+    } } */
+/* NUMBERS BY REQUIREMENT PARAGRAPH */
+@media (max-width: 400px) {
+  .requirements > p {
+    margin-left: 3rem;
+  }
+  .requirements > p:first-of-type::before {
+    content: "1";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #008AA2;
+    position: absolute;
+    margin-left: -3rem;
+  }
+  .requirements > p:nth-of-type(2)::before {
+    content: "2";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #FF5C35;
+    position: absolute;
+    margin-left: -3rem;
+  }
+  .requirements > p:nth-of-type(3)::before {
+    content: "3";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #F77879;
+    position: absolute;
+    margin-left: -3rem;
+  }
+  .requirements > p:nth-of-type(4)::before {
+    content: "4";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #EF8700;
+    position: absolute;
+    margin-left: -3rem;
+  }
+}
+
+@media (min-width: 800px) {
+  footer {
+    position: relative;
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    width: 42rem;
+    height: 2px;
+    display: block;
+    clear: both;
+    left: 0px;
+    top: 50%;
+    background-color: #FF5C35;
+  }
+  footer::after {
+    content: "";
+    position: absolute;
+    width: 42rem;
+    height: 2px;
+    display: block;
+    clear: both;
+    right: 0px;
+    top: 50%;
+    background-color: #FF5C35;
+  }
+}
+
+h1::after {
+  content: "";
+  background-image: url(yellow_umbrella_with_chairs.png);
+  background-repeat: no-repeat;
+  background-size: 10rem 13rem;
+  width: 10rem;
+  height: 13rem;
+  display: inline-block;
+  position: absolute;
+  right: -4rem;
+  top: 6rem;
+  overflow: hidden;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+@media (min-width: 800px) {
+  h1::after {
+    background-size: 50rem 65rem;
+    width: 50rem;
+    height: 65rem;
+    right: -10rem;
+    top: 25rem;
+  }
+}
+
+#css-zen-garden {
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat;
+  background-color: #9CBDAD;
+  background-size: 100%;
+  position: relative;
+}
+
+/*# sourceMappingURL=style.css.map */
