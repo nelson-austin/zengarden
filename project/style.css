@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {
+  background-color: #fcefdb;
+}
+
 img {
   max-width: 75%;
   display: block;
@@ -224,18 +233,33 @@ footer a:nth-child(5) {
   }
 }
 
-h1::after {
+.design-selection nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 800px) {
+  .design-selection nav ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .design-selection {
+    grid-column: 1/3;
+  }
+}
+h2::before {
   content: "";
   background-image: url(yellow_umbrella_with_chairs.png);
   background-repeat: no-repeat;
-  background-size: 10rem 13rem;
-  width: 10rem;
-  height: 13rem;
-  display: inline-block;
+  background-size: 2583px 2334px;
+  width: 100%;
+  height: 2334px;
   position: absolute;
   right: -4rem;
-  top: 6rem;
-  overflow: hidden;
+  top: 10rem;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -243,19 +267,20 @@ h1::after {
   transform: rotate(180deg);
 }
 @media (min-width: 800px) {
-  h1::after {
-    background-size: 50rem 65rem;
-    width: 50rem;
-    height: 65rem;
-    right: -10rem;
+  h2::before {
+    background-size: 30rem 39rem;
+    width: 40rem;
+    height: 52rem;
+    right: -15rem;
     top: 25rem;
   }
 }
 
-#css-zen-garden {
-  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat;
-  background-color: #9CBDAD;
-  background-size: 100%;
+.intro {
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center no-repeat;
+  background-color: #fcefdb;
+  background-size: cover;
+  overflow: hidden;
   position: relative;
 }
 
