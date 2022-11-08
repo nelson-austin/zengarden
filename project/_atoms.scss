@@ -110,8 +110,15 @@ $break-small: 400px;
 }
 
 // element styling
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
 body {
-    margin: 1em;
+margin: 1em;
+    background-color: lighten($color-h2, 65%);
 }
 
 img {
