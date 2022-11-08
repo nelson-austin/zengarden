@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'keyframes' as *;
 
 // mixins to take care of repeated patterns.
 @mixin lists {
@@ -47,12 +48,15 @@
 @mixin sunglasses() {
     content: "";
    
-    background-image: url(red_glasses.png);
+    background-image: url("red_glasses.png");
     background-repeat: no-repeat;
-    background-size: 65px 30px;
-    width: 65px;
-    height: 30px;
+    background-size:contain;
+    width: 5rem;
+    height: 3rem;
     display: inline-block;
+    position: absolute;
+    right: 75%;
+    
 }
 @mixin circle($color) {
     height: 4rem;
@@ -106,6 +110,10 @@ $break-small: 400px;
 }
 
 // element styling
+body {
+    margin: 1em;
+}
+
 img {
     max-width: 75%;
     display: block;
@@ -117,27 +125,39 @@ h2 {
     font-family: $font-h2;
     color: $color-h2;
     font-size: 3em;
+    margin-bottom: 0;
+   // font-family: Georgia, serif;
+    //color: #8d01a7;
+    //font-size: 2rem;
+
 }
 
 h3 {
     font-family: $font-h3;
-    text-transform: capitalize;
-    color: $color-h2;
-    font-size: 2.25em;
-    padding: 0.5em 0 0.25em 0;
+    text-transform: uppercase;
+    color: $color-h3 ;
+    font-size: 2em;
+    padding: 0.5em 0 0 0;
+    text-align: right;
+    margin-bottom: 0;
 }
 
 h1 {
     font-family: $font-h1;
     color: $color-h1;
-    font-size: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-
+    font-size: 3rem;
+    padding-top: 0;
+    padding-bottom: 16rem;
+    letter-spacing:-2px;
+    text-align: center;
+    //font-family: aerial;
+   // color: #82510a;
+    //font-size: 3rem;
     @include breakpoint(large) {
         font-size: 7rem;
         padding-top: 10rem;
         padding-bottom: 50rem;
+        
     }
 }
 
@@ -147,16 +167,27 @@ p {
     margin: 0;
     color: $color-body;
 }
+ .preamble {
+    h3 {
+        text-align: center;
+    }
+ }
+ 
+ .summary{
+  p~p {
+    display:none;
+ }
+}
 
 a {
-    border-bottom: 1px solid $color-accent2;
+    border-bottom: 2px solid $color-accent2;
     color: $color-body;
     text-decoration: none;
 }
 
 a:hover {
     color: $color-accent4;
-    border-bottom: 1px solid $color-accent4;
+    border-bottom: 1px solid $color-accent2;
 }
 
 ul {
@@ -169,6 +200,7 @@ ul {
     
     &::after {
         @include red-line-afterwards();
+        margin-top: 1rem;
     }
 }
 
@@ -176,6 +208,7 @@ ul {
 footer {
     display: flex;
     justify-content: space-between;
+    margin-top: 4rem;
 
     @include breakpoint(large) {
         justify-content: center;
@@ -206,8 +239,15 @@ footer a:nth-child(5) {
 .explanation h3, .participation h3, .benefits h3, .requirements h3 {
     display: block;
     &::before {
-        @include sunglasses();
-    } } 
+       @include sunglasses(); 
+       animation: rotate 3s linear infinite;
+    }
+} 
+/* This is the container that holds the h3::before for the animation */
+div {
+    position: relative;
+}
+
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
 .requirements > p {
