@@ -36,7 +36,7 @@
 @mixin red-line-afterwards-footer($side) {
     content:'';
         position: absolute;
-        width: 42rem;
+        width: 10rem;
         height: 2px;
         display: block;
         clear: both;
@@ -47,16 +47,12 @@
 
 @mixin sunglasses() {
     content: "";
-   
     background-image: url("red_glasses.png");
     background-repeat: no-repeat;
     background-size:contain;
     width: 5rem;
     height: 3rem;
-    display: inline-block;
-    position: absolute;
-    right: 75%;
-    
+    display: inline-block; 
 }
 @mixin circle($color) {
     height: 4rem;
