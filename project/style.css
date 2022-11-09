@@ -1,10 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 * {
   margin: 0 auto;
   padding: 0;
 }
 
 body {
+  margin: 1em;
   background-color: #fcefdb;
 }
 
@@ -19,22 +31,27 @@ h2 {
   font-family: Georgia, serif;
   color: #82510A;
   font-size: 3em;
+  margin-bottom: 0;
 }
 
 h3 {
   font-family: Georgia, serif;
-  text-transform: capitalize;
-  color: #82510A;
-  font-size: 2.25em;
-  padding: 0.5em 0 0.25em 0;
+  text-transform: uppercase;
+  color: #44bdb2;
+  font-size: 2em;
+  padding: 0.5em 0 0 0;
+  text-align: right;
+  margin-bottom: 0;
 }
 
 h1 {
   font-family: Georgia, serif;
   color: black;
-  font-size: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  font-size: 3rem;
+  padding-top: 0;
+  padding-bottom: 16rem;
+  letter-spacing: -2px;
+  text-align: center;
 }
 @media (min-width: 800px) {
   h1 {
@@ -48,18 +65,26 @@ p {
   font-family: "proxima nova", monospace;
   padding: 0.5em 0;
   margin: 0;
-  color: #11B7A9;
+  color: black;
+}
+
+.preamble h3 {
+  text-align: center;
+}
+
+.summary p ~ p {
+  display: none;
 }
 
 a {
-  border-bottom: 1px solid #008AA2;
-  color: #11B7A9;
+  border-bottom: 2px solid #008AA2;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
   color: #F77879;
-  border-bottom: 1px solid #F77879;
+  border-bottom: 1px solid #008AA2;
 }
 
 ul {
@@ -79,12 +104,14 @@ ul {
   display: block;
   clear: both;
   background-color: #FF5C35;
+  margin-top: 1rem;
 }
 
 /* Footer CSS/Git/etc. */
 footer {
   display: flex;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 @media (min-width: 800px) {
   footer {
@@ -158,12 +185,18 @@ footer a:nth-child(5) {
 }
 .explanation h3::before, .participation h3::before, .benefits h3::before, .requirements h3::before {
   content: "";
-  background-image: url(red_glasses.png);
+  background-image: url("red_glasses.png");
   background-repeat: no-repeat;
-  background-size: 65px 30px;
-  width: 65px;
-  height: 30px;
+  background-size: contain;
+  width: 5rem;
+  height: 3rem;
   display: inline-block;
+  animation: rotate 3s linear infinite;
+}
+
+/* This is the container that holds the h3::before for the animation */
+div {
+  position: relative;
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
@@ -212,7 +245,7 @@ footer a:nth-child(5) {
   footer::before {
     content: "";
     position: absolute;
-    width: 42rem;
+    width: 10rem;
     height: 2px;
     display: block;
     clear: both;
@@ -223,7 +256,7 @@ footer a:nth-child(5) {
   footer::after {
     content: "";
     position: absolute;
-    width: 42rem;
+    width: 10rem;
     height: 2px;
     display: block;
     clear: both;
