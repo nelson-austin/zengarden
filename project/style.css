@@ -266,6 +266,36 @@ div {
   }
 }
 
+@media (min-width: 800px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main .participation, .main .explanation, .main .benefits {
+    grid-column: 3/4;
+  }
+  .main .requirements {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main .requirements h3 {
+    text-align: center;
+  }
+  .main .requirements h3, .main .requirements p:first-of-type {
+    grid-column: 1/4;
+  }
+  .main .requirements p:nth-of-type(2), .main .requirements p:nth-of-type(4) {
+    grid-column: 3/4;
+  }
+  .main .requirements p:nth-of-type(3) {
+    grid-column: 1/2;
+  }
+  .main footer {
+    grid-column: 1/4;
+  }
+}
+
 .design-selection nav ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
