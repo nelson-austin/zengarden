@@ -51,7 +51,7 @@ h1 {
   padding-top: 0;
   padding-bottom: 16rem;
   letter-spacing: -2px;
-  text-align: center;
+  text-align: left;
 }
 @media (min-width: 800px) {
   h1 {
@@ -200,7 +200,7 @@ div {
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .requirements > p {
     margin-left: 3rem;
   }
@@ -263,6 +263,16 @@ div {
     right: 0px;
     top: 50%;
     background-color: #FF5C35;
+  }
+}
+
+@media (min-width: 800px) {
+  .preamble {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .preamble p {
+    grid-column: 1/2;
   }
 }
 
@@ -336,6 +346,30 @@ h2::before {
     height: 52rem;
     right: -15rem;
     top: 25rem;
+  }
+}
+
+.main {
+  padding-top: 50rem;
+}
+@media (min-width: 800px) {
+  .main::before {
+    content: "";
+    background-image: url(boardwalk.png);
+    background-repeat: no-repeat;
+    background-size: 2583px 2334px;
+    overflow: hidden;
+    width: 100%;
+    height: 2334px;
+    position: absolute;
+    left: 0rem;
+    top: -60rem;
+    z-index: 10;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 

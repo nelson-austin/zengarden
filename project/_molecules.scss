@@ -4,6 +4,16 @@
 // use the mixins from the atoms module to compose our molecules. If you prefer the terminology 'blocks' and 'elements' feel free to use it instead!
 //The base styling we made on our atoms (elements) does most of the work...here we would make any modifications on the elements if they need to appear differently in a certain molecule (block)
 
+
+.preamble {
+    @include atoms.breakpoint(large) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        p {
+            grid-column: 1 / 2;
+        }
+} }
+
 .main {
     @include atoms.breakpoint(large) {
         display: grid;
