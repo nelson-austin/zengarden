@@ -77,7 +77,7 @@
 
 // media breakpoints
 $break-large: 800px;
-$break-small: 400px;
+$break-small: 500px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
@@ -152,7 +152,7 @@ h1 {
     padding-top: 0;
     padding-bottom: 16rem;
     letter-spacing:-2px;
-    text-align: center;
+    text-align: left;
     //font-family: aerial;
    // color: #82510a;
     //font-size: 3rem;
