@@ -77,7 +77,7 @@
 
 // media breakpoints
 $break-large: 800px;
-$break-small: 400px;
+$break-small: 500px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
