@@ -291,3 +291,44 @@ footer {
         }
 }
 }
+
+
+/************ design-selection box **********/
+
+
+.design-selection h3{
+    font-size:large;
+    text-align: center;
+}
+.design-selection {
+    text-align: center;
+    border: 4px solid $color-accent2;
+   margin-top: 3px;
+    margin: bottom 2px; 
+   
+   }
+
+
+.zen-resource h3{
+    font-size:small;
+    text-align: center;
+}
+.zen-resources {
+    text-align: center;
+    border: 4px solid $color-accent6;
+    background-color:$color-accent3;
+    margin-top: 3px;
+    margin: bottom 1px; 
+   }
+.design-archives h3{
+    font-size:large;
+    text-align: center;
+}
+.design-archives {
+text-align: center;
+border: 4px solid $color-accent5; 
+background-color: $color-accent4;
+margin-top: 3px;
+margin: bottom 1px; 
+}
+

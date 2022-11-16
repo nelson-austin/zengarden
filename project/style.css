@@ -270,6 +270,45 @@ div {
   }
 }
 
+/************ design-selection box **********/
+.design-selection h3 {
+  font-size: large;
+  text-align: center;
+}
+
+.design-selection {
+  text-align: center;
+  border: 4px solid #008AA2;
+  margin-top: 3px;
+  margin: bottom 2px;
+}
+
+.zen-resource h3 {
+  font-size: small;
+  text-align: center;
+}
+
+.zen-resources {
+  text-align: center;
+  border: 4px solid #DA0000;
+  background-color: #9CBDAD;
+  margin-top: 3px;
+  margin: bottom 1px;
+}
+
+.design-archives h3 {
+  font-size: large;
+  text-align: center;
+}
+
+.design-archives {
+  text-align: center;
+  border: 4px solid #EF8700;
+  background-color: #F77879;
+  margin-top: 3px;
+  margin: bottom 1px;
+}
+
 @media (min-width: 800px) {
   .preamble {
     display: grid;
