@@ -16,6 +16,7 @@
 }
 
 body {
+  margin: 1em;
   background-color: #fcefdb;
   width: 100%;
   content: " ";
@@ -335,7 +336,7 @@ div {
   margin: bottom 2px;
 }
 
-.zen-resource h3 {
+.zen-resources h3 {
   font-size: small;
   text-align: center;
 }
