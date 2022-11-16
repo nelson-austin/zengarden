@@ -24,7 +24,7 @@
 }
 
 @mixin red-line-afterwards() {
-    content:'';
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
@@ -34,26 +34,27 @@
 }
 
 @mixin red-line-afterwards-footer($side) {
-    content:'';
-        position: absolute;
-        width: 10rem;
-        height: 2px;
-        display: block;
-        clear: both;
-        #{$side}: 0px;
-        top: 50%;
-        background-color: $color-accent1;
+    content: '';
+    position: absolute;
+    width: 30rem;
+    height: 2px;
+    display: block;
+    clear: both;
+    #{$side}: -35rem;
+    top: 50%;
+    background-color: $color-accent1;
 }
 
 @mixin sunglasses() {
     content: "";
     background-image: url("red_glasses.png");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     width: 5rem;
     height: 3rem;
-    display: inline-block; 
+    display: inline-block;
 }
+
 @mixin circle($color) {
     height: 4rem;
     width: 4rem;
@@ -73,6 +74,16 @@
     color: $color;
     position: absolute;
     margin-left: -3rem;
+}
+
+@mixin requirement-number-large($p-number, $color) {
+    content: "#{$p-number}";
+    font-size: 4rem;
+    font-weight: 800;
+    color: $color;
+    position: relative;
+    display: block;
+    text-align: center;
 }
 
 // media breakpoints
@@ -113,7 +124,10 @@ $break-small: 500px;
 }
 
 body {
-    background-color: lighten($color-h2, 65%);
+
+
+    margin: 1em;
+  background-color: lighten($color-h2, 65%);
     width: 100%;
     content: " ";
     background-image: url("background_sand.png");
@@ -133,7 +147,7 @@ h2 {
     color: $color-h2;
     font-size: 3em;
     margin-bottom: 0;
-   // font-family: Georgia, serif;
+    // font-family: Georgia, serif;
     //color: #8d01a7;
     //font-size: 2rem;
 }
@@ -154,16 +168,17 @@ h1 {
     font-size: 3rem;
     padding-top: 0;
     padding-bottom: 16rem;
-    letter-spacing:-2px;
+    letter-spacing: -2px;
     text-align: left;
+
     //font-family: aerial;
-   // color: #82510a;
+    // color: #82510a;
     //font-size: 3rem;
     @include breakpoint(large) {
         font-size: 7rem;
         padding-top: 10rem;
         padding-bottom: 50rem;
-        
+
     }
 }
 
@@ -173,42 +188,46 @@ p {
     margin: 0;
     color: $color-body;
 }
- .preamble {
+
+.preamble {
     h3 {
         text-align: center;
     }
- }
- 
- .summary{
-  p~p {
-    display:none;
- }
+}
+
+.summary {
+    p~p {
+        display: none;
+    }
 }
 
 a {
     border-bottom: 2px solid $color-accent2;
     color: $color-body;
     text-decoration: none;
-}
 
-a:hover {
-    color: $color-accent4;
-    border-bottom: 1px solid $color-accent2;
+    &:hover {
+        color: $color-accent4;
+        border-bottom: 1px solid $color-accent2;
+    }
 }
 
 ul {
     @include unordered-list();
 }
 
-.explanation, .participation, .benefits, .requirements {
+.explanation,
+.participation,
+.benefits,
+.requirements {
     display: block;
-    
-    
+
+    @include breakpoint(large) {
     &::after {
         @include red-line-afterwards();
         margin-top: 1rem;
     }
-}
+}}
 
 /* Footer CSS/Git/etc. */
 footer {
@@ -220,35 +239,46 @@ footer {
         justify-content: center;
         gap: 1rem;
     }
-}
-footer a:first-child {
-    @include circle($color-accent1);
-}
 
-footer a:nth-child(2) {
-    @include circle($color-accent2);
-}
-
-footer a:nth-child(3) {
-    @include circle($color-accent3);
-}
-
-footer a:nth-child(4) {
-    @include circle($color-accent4);
-}
-
-footer a:nth-child(5) {
-    @include circle($color-accent5);
-}
-
-
-.explanation h3, .participation h3, .benefits h3, .requirements h3 {
-    display: block;
-    &::before {
-       @include sunglasses(); 
-       animation: rotate 3s linear infinite;
+    a {
+        border-bottom: none;
+        // idea: animate circles on hover
     }
-} 
+
+    a:first-child {
+        @include circle($color-accent1);
+    }
+
+    a:nth-child(2) {
+        @include circle($color-accent2);
+    }
+
+    a:nth-child(3) {
+        @include circle($color-accent3);
+    }
+
+    a:nth-child(4) {
+        @include circle($color-accent4);
+    }
+
+    a:nth-child(5) {
+        @include circle($color-accent5);
+    }
+}
+
+
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
+    display: block;
+
+    &::before {
+        @include sunglasses();
+        animation: rotate 3s linear infinite;
+    }
+}
+
 /* This is the container that holds the h3::before for the animation */
 div {
     position: relative;
@@ -256,24 +286,44 @@ div {
 
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-.requirements > p {
+.requirements>p {
     @include breakpoint(small) {
-    margin-left: 3rem;
+        margin-left: 3rem;
 
-    &:first-of-type::before {
-        @include requirement-number(1, $color-accent2);
+        &:first-of-type::before {
+            @include requirement-number(1, $color-accent2);
         }
 
-    &:nth-of-type(2)::before {
-        @include requirement-number(2, $color-accent1);
+        &:nth-of-type(2)::before {
+            @include requirement-number(2, $color-accent1);
         }
 
-    &:nth-of-type(3)::before {
-        @include requirement-number(3, $color-accent4);
+        &:nth-of-type(3)::before {
+            @include requirement-number(3, $color-accent4);
         }
 
-    &:nth-of-type(4)::before {
-        @include requirement-number(4, $color-accent5);
+        &:nth-of-type(4)::before {
+            @include requirement-number(4, $color-accent5);
+        }
+    }
+
+    @include breakpoint(large) {
+        margin-left: 3rem;
+
+        &:first-of-type::before {
+            @include requirement-number-large(1, $color-accent2);
+        }
+
+        &:nth-of-type(2)::before {
+            @include requirement-number-large(2, $color-accent1);
+        }
+
+        &:nth-of-type(3)::before {
+            @include requirement-number-large(3, $color-accent4);
+        }
+
+        &:nth-of-type(4)::before {
+            @include requirement-number-large(4, $color-accent5);
         }
     }
 }
@@ -281,7 +331,7 @@ div {
 footer {
     @include breakpoint(large) {
         position: relative;
-        
+
         &::before {
             @include red-line-afterwards-footer(left);
         }
@@ -289,6 +339,7 @@ footer {
         &::after {
             @include red-line-afterwards-footer(right);
         }
+
 }
 }
 
@@ -331,4 +382,3 @@ background-color: $color-accent4;
 margin-top: 3px;
 margin: bottom 1px; 
 }
-

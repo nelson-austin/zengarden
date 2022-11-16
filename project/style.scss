@@ -31,12 +31,11 @@ h2::before {
 
 // Boardwalk image
 .main {
+  @include atoms.breakpoint(large) {
 
   padding-top: 50rem;
 
   &::before {
-
-  @include atoms.breakpoint(large) {
   content: "";
   background-image: url(boardwalk.png);
   background-repeat: no-repeat;
