@@ -401,10 +401,10 @@ h2::before {
   }
 }
 
-.main {
-  padding-top: 50rem;
-}
 @media (min-width: 800px) {
+  .main {
+    padding-top: 50rem;
+  }
   .main::before {
     content: "";
     background-image: url(boardwalk.png);
