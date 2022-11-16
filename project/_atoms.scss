@@ -113,8 +113,12 @@ $break-small: 500px;
 }
 
 body {
-margin: 1em;
     background-color: lighten($color-h2, 65%);
+    width: 100%;
+    content: " ";
+    background-image: url("background_sand.png");
+    background-repeat: repeat-y;
+    background-size:contain;
 }
 
 img {
@@ -132,7 +136,6 @@ h2 {
    // font-family: Georgia, serif;
     //color: #8d01a7;
     //font-size: 2rem;
-
 }
 
 h3 {

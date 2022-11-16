@@ -16,8 +16,12 @@
 }
 
 body {
-  margin: 1em;
   background-color: #fcefdb;
+  width: 100%;
+  content: " ";
+  background-image: url("background_sand.png");
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 img {
@@ -374,7 +378,7 @@ h2::before {
 }
 
 .intro {
-  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center no-repeat;
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
   background-color: #fcefdb;
   background-size: cover;
   overflow: hidden;
