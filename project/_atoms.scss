@@ -75,6 +75,16 @@
     margin-left: -3rem;
 }
 
+@mixin requirement-number-large($p-number, $color) {
+    content: "#{$p-number}";
+    font-size: 4rem;
+    font-weight: 800;
+    color: $color;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
 // media breakpoints
 $break-large: 800px;
 $break-small: 500px;
@@ -273,6 +283,26 @@ div {
         @include requirement-number(4, $color-accent5);
         }
     }
+
+    @include breakpoint(large) {
+        margin-left: 3rem;
+    
+        &:first-of-type::before {
+            @include requirement-number-large(1, $color-accent2);
+            }
+    
+        &:nth-of-type(2)::before {
+            @include requirement-number-large(2, $color-accent1);
+            }
+    
+        &:nth-of-type(3)::before {
+            @include requirement-number-large(3, $color-accent4);
+            }
+    
+        &:nth-of-type(4)::before {
+            @include requirement-number-large(4, $color-accent5);
+            }
+        }
 }
 
 footer {
