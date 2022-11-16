@@ -16,8 +16,12 @@
 }
 
 body {
-  margin: 1em;
   background-color: #fcefdb;
+  width: 100%;
+  content: " ";
+  background-image: url("background_sand.png");
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 img {
@@ -318,6 +322,45 @@ div {
   }
 }
 
+/************ design-selection box **********/
+.design-selection h3 {
+  font-size: large;
+  text-align: center;
+}
+
+.design-selection {
+  text-align: center;
+  border: 4px solid #008AA2;
+  margin-top: 3px;
+  margin: bottom 2px;
+}
+
+.zen-resource h3 {
+  font-size: small;
+  text-align: center;
+}
+
+.zen-resources {
+  text-align: center;
+  border: 4px solid #DA0000;
+  background-color: #9CBDAD;
+  margin-top: 3px;
+  margin: bottom 1px;
+}
+
+.design-archives h3 {
+  font-size: large;
+  text-align: center;
+}
+
+.design-archives {
+  text-align: center;
+  border: 4px solid #EF8700;
+  background-color: #F77879;
+  margin-top: 3px;
+  margin: bottom 1px;
+}
+
 @media (min-width: 800px) {
   .preamble {
     display: grid;
@@ -426,7 +469,7 @@ h2::before {
 }
 
 .intro {
-  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center no-repeat;
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
   background-color: #fcefdb;
   background-size: cover;
   overflow: hidden;
