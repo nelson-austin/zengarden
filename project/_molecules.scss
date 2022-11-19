@@ -59,6 +59,7 @@
 @media (min-width: 800px) {
     .design-selection nav ul {
         grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
     .wrapper {
         display: grid;

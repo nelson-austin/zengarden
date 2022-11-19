@@ -234,6 +234,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
+    margin-bottom: 4rem;
 
     @include breakpoint(large) {
         justify-content: center;
@@ -358,8 +359,12 @@ footer {
     margin: bottom 2px; 
    
    }
+// making footer responsive//
 
+   
+   
 
+  /* @media (min-width: 400px){ */ 
 .zen-resources h3{
     font-size:large;
     text-align: center;
@@ -367,18 +372,121 @@ footer {
 .zen-resources {
     text-align: center;
     border: 4px solid $color-accent6;
-    background-color:$color-accent3;
+    background-color:$color-accent5;
     margin-top: 3px;
-    margin: bottom 1px; 
+    margin-bottom:  1px; 
    }
 .design-archives h3{
     font-size:large;
     text-align: center;
 }
+
+
+
 .design-archives {
 text-align: center;
 border: 4px solid $color-accent5; 
 background-color: $color-accent4;
 margin-top: 3px;
 margin: bottom 1px; 
+}
+
+
+
+.design-selection nav li {
+    background-image: url(pink.png); 
+    background: repeat;
+}
+.design-selection nav ul li{
+    padding: 8px;
+    text-align:left;
+}
+.design-selection{
+    a~a::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        background-size: contain;
+        width: 4rem;
+        height: 4rem;
+        background-repeat: no-repeat;
+        margin: 2rem;
+        z-index: -1;
+        animation: rain 5s linear infinite;
+        top: -20px;
+      
+    }
+
+    li:nth-child(1){
+        grid-column:1/3;
+        grid-row: 1/2;
+    }
+ li:nth-child(1) a::before {
+    background-image: url("pink.png");
+    left: 0;
+    
+}
+
+li:nth-child(2) {
+    grid-column:3/5;
+    grid-row: 1/2;
+}
+
+ li:nth-child(2) a::before{
+    background-image: url("green.png");
+    left: 100px;
+}
+
+li:nth-child(3) {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+ li:nth-child(3) a::before{
+     background-image: url("gold.png");
+}
+
+li:nth-child(4) {
+    grid-column: 3/5;
+    grid-row: 3/4;
+}
+ li:nth-child(4) a::before{
+     background-image: url("coral.png");
+} 
+li:nth-child(5) {
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+li:nth-child(6) {
+    grid-column: 3/5;
+    grid-row: 5/6;
+}
+li:nth-child(7) {
+    grid-column:1/3;
+    grid-row: 7/8;
+}
+li:nth-child(8) {
+    grid-column: 3/5;
+    grid-row: 7/8;
+}
+}
+
+@keyframes rain {
+    0%{
+    top: -20px;
+    }
+    25% {
+        top: 50px;
+    }
+    50% {
+        top: 80px;
+    }
+    75% {
+        top: 150px;
+    }
+    99% {
+        top: 180px;
+    }
+    100% {
+        top: 0;
+    }
 }
