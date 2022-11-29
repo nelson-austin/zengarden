@@ -328,6 +328,7 @@ div {
 .design-selection h3 {
   font-size: large;
   text-align: center;
+  display: block;
 }
 
 .design-selection {
