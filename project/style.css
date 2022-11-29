@@ -25,14 +25,9 @@ html {
 }
 
 body {
-  /*background-color: lighten($color-h2, 65%);
-    width: 100%;
-    content: " ";
-    background-image: url("background_sand.png");
-    background-repeat: repeat-y;
-    background-size:contain; */
+  width: 100%;
+  content: " ";
   background: url(beach_background.jpg) top center no-repeat;
-  background-color: #fcefdb;
   background-size: contain;
   position: relative;
 }
@@ -234,16 +229,8 @@ div {
   .requirements > p {
     margin-left: 3rem;
   }
-  .requirements > p:first-of-type::before {
-    content: "1";
-    font-size: 4rem;
-    font-weight: 800;
-    color: #008AA2;
-    position: absolute;
-    margin-left: -3rem;
-  }
   .requirements > p:nth-of-type(2)::before {
-    content: "2";
+    content: "1";
     font-size: 4rem;
     font-weight: 800;
     color: #FF5C35;
@@ -251,7 +238,7 @@ div {
     margin-left: -3rem;
   }
   .requirements > p:nth-of-type(3)::before {
-    content: "3";
+    content: "2";
     font-size: 4rem;
     font-weight: 800;
     color: #F77879;
@@ -259,7 +246,7 @@ div {
     margin-left: -3rem;
   }
   .requirements > p:nth-of-type(4)::before {
-    content: "4";
+    content: "3";
     font-size: 4rem;
     font-weight: 800;
     color: #EF8700;
@@ -271,17 +258,8 @@ div {
   .requirements > p {
     margin-left: 3rem;
   }
-  .requirements > p:first-of-type::before {
-    content: "1";
-    font-size: 4rem;
-    font-weight: 800;
-    color: #008AA2;
-    position: relative;
-    display: block;
-    text-align: center;
-  }
   .requirements > p:nth-of-type(2)::before {
-    content: "2";
+    content: "1";
     font-size: 4rem;
     font-weight: 800;
     color: #FF5C35;
@@ -290,7 +268,7 @@ div {
     text-align: center;
   }
   .requirements > p:nth-of-type(3)::before {
-    content: "3";
+    content: "2";
     font-size: 4rem;
     font-weight: 800;
     color: #F77879;
@@ -299,7 +277,7 @@ div {
     text-align: center;
   }
   .requirements > p:nth-of-type(4)::before {
-    content: "4";
+    content: "3";
     font-size: 4rem;
     font-weight: 800;
     color: #EF8700;
