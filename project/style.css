@@ -573,13 +573,4 @@ h2::before {
   }
 }
 
-.intro {
-  /* .00 */
-  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
-  background-color: #fcefdb;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
-
 /*# sourceMappingURL=style.css.map */
