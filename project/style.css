@@ -15,9 +15,7 @@
   padding: 0;
 }
 
-
 body {
-
   background-color: #fcefdb;
   width: 100%;
   content: " ";
@@ -26,6 +24,9 @@ body {
   background-size: contain;
 }
 
+h1, h2, h3, h4, h5, p {
+  padding: 1rem;
+}
 
 body {
   width: 100%;
@@ -35,8 +36,6 @@ body {
   position: relative;
 }
 body .page-wrapper {
-h1, h2, h3, h4, h5, p {
-
   padding: 1rem;
 }
 
@@ -50,7 +49,7 @@ img {
 h2 {
   font-family: Georgia, serif;
   color: #82510A;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 0;
 }
 
@@ -134,14 +133,8 @@ ul {
 /* Footer CSS/Git/etc. */
 footer {
   display: flex;
-
-  justify-content: space-between;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-
   padding-bottom: 3rem;
   padding-top: 3rem;
-
 }
 @media (min-width: 800px) {
   footer {
@@ -322,14 +315,6 @@ div {
   }
 }
 
-/************ design-selection box **********/
-
-.design-selection h3 {
-  font-size: large;
-  text-align: center;
-  display: block;
-}
-
 .design-selection {
   padding: 2rem;
   line-height: 2rem;
@@ -340,67 +325,9 @@ div {
   margin: bottom 1px;
   width: 50%;
 }
-
-
-.main-supporting h3 {
-  font-size-adjust: 1px;
-}
-
-.preamble h3 {
-  font-size: 1.5em;
-}
-
-.preamble p {
-  text-decoration: italic;
-}
-
-.explanation h3 {
-  font-size: 1.5em;
-}
-
-.participation h3 {
-  font-size: 1.5em;
-}
-
-/* @media (min-width: 400px){ */
-.zen-resources h3 {
-  font-size: large;
-
 .design-selection h3 {
-
   text-align: center;
-}
-
-.zen-resources {
-  padding: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  border: 4px solid 
-  background-color: #EF8700;
-  margin-top: 3px;
-  margin-bottom: 1px;
-  background-color: #9CBDAD;
-  margin-top: 3rem;
-  margin: bottom 1px;
-  width: 50%;
-
-}
-.zen-resources h3 {
-  text-align: center;
-}
-
-.design-archives {
-  padding: 2rem;
-  line-height: 2rem;
-  text-align: center;
-  border: 4px solid #EF8700;
-  background-color: #F77879;
-  margin-top: 3rem;
-  margin: bottom 1px;
-  width: 50%;
-}
-.design-archives h3 {
-  text-align: center;
+  font-size: 1.5rem;
 }
 
 .design-selection nav li {
@@ -493,6 +420,36 @@ div {
     top: 0;
   }
 }
+.zen-resources {
+  padding: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border: 4px solid #DA0000;
+  background-color: #9CBDAD;
+  margin-top: 3rem;
+  margin: bottom 1px;
+  width: 50%;
+}
+.zen-resources h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.design-archives {
+  padding: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  border: 4px solid #EF8700;
+  background-color: #F77879;
+  margin-top: 3rem;
+  margin: bottom 1px;
+  width: 50%;
+}
+.design-archives h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 @media (min-width: 800px) {
   .preamble {
     display: grid;
@@ -618,6 +575,11 @@ h2::before {
 
 .intro {
   /* .00 */
+  background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
+  background-color: #fcefdb;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

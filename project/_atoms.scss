@@ -505,6 +505,8 @@ li:nth-child(8) {
         top: 0;
     }
 }
+
+.zen-resources {
     @include sidebar-formatting($color-accent6, $color-accent3);
 }
 
