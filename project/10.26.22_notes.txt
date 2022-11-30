@@ -1,25 +1,17 @@
 MOBILE
-  **AUSTIN**
-- Instead of repeating sand, transition to sandy/tan color
-- Depending on tan color, choose new text color as needed
 
-  **DEBBIE**
-- Fix positioning of sunglasses (to the left of h3)
-- Add animation for sunglasses
 
-  **KAYLEE**
-- Add in 1/2/3 for requirements section (no image)
 
-  **KAYLEE**
-- Format circle links (HTML, CSS, etc.); add color/shape, as well as hr on either side
 
-  **DEBBIE**
-- Umbrellas for "Select A Design"
-  **AUSTIN**
-- two-wide grid
+88 align the text on the bottom part
 
-  **DEBBIE**
-- background/colors for Archives & Resources
+top umbrella on mobile needs fixed
+side scrolling
+
+  
+ 
+
+
 
 DESKTOP
 
@@ -33,3 +25,6 @@ DESKTOP
 
   **AUSTIN**
 - add seagull/sign image
+  fix boardwalk
+
+  Debbie add svg, add umbrellas, and fix footer WOwSER
