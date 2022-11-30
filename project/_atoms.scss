@@ -86,6 +86,22 @@
     text-align: center;
 }
 
+@mixin sidebar-formatting($border-color, $background-color) {
+    padding: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border: 4px solid $border-color;
+    background-color: $background-color;
+    margin-top: 3rem;
+    margin: bottom 1px;
+    width: 50%;
+
+    h3 {
+        font-size: large;
+        text-align: center;
+    }
+}
+
 // media breakpoints
 $break-large: 800px;
 $break-small: 500px;
@@ -124,15 +140,16 @@ $break-small: 500px;
 }
 
 body {
-
-
-    margin: 1em;
-  background-color: lighten($color-h2, 65%);
+    background-color: lighten($color-h2, 65%);
     width: 100%;
     content: " ";
     background-image: url("background_sand.png");
     background-repeat: repeat-y;
-    background-size:contain;
+    background-size: contain;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 1rem;
 }
 
 img {
@@ -147,9 +164,6 @@ h2 {
     color: $color-h2;
     font-size: 3em;
     margin-bottom: 0;
-    // font-family: Georgia, serif;
-    //color: #8d01a7;
-    //font-size: 2rem;
 }
 
 h3 {
@@ -157,7 +171,6 @@ h3 {
     text-transform: uppercase;
     color: $color-h3 ;
     font-size: 2em;
-    padding: 0.5em 0 0 0;
     text-align: right;
     margin-bottom: 0;
 }
@@ -184,7 +197,6 @@ h1 {
 
 p {
     font-family: $font-body;
-    padding: 0.5em 0;
     margin: 0;
     color: $color-body;
 }
@@ -223,17 +235,18 @@ ul {
     display: block;
 
     @include breakpoint(large) {
-    &::after {
-        @include red-line-afterwards();
-        margin-top: 1rem;
+        &::after {
+            @include red-line-afterwards();
+            margin-top: 1rem;
+        }
     }
-}}
+}
 
 /* Footer CSS/Git/etc. */
 footer {
     display: flex;
-    justify-content: space-between;
-    margin-top: 4rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
 
     @include breakpoint(large) {
         justify-content: center;
@@ -340,45 +353,19 @@ footer {
             @include red-line-afterwards-footer(right);
         }
 
-}
+    }
 }
 
 
 /************ design-selection box **********/
-
-
-.design-selection h3{
-    font-size:large;
-    text-align: center;
-}
 .design-selection {
-    text-align: center;
-    border: 4px solid $color-accent2;
-   margin-top: 3px;
-    margin: bottom 2px; 
-   
-   }
-
-
-.zen-resources h3{
-    font-size:large;
-    text-align: center;
+    @include sidebar-formatting($color-accent2, none);
 }
+
 .zen-resources {
-    text-align: center;
-    border: 4px solid $color-accent6;
-    background-color:$color-accent3;
-    margin-top: 3px;
-    margin: bottom 1px; 
-   }
-.design-archives h3{
-    font-size:large;
-    text-align: center;
+    @include sidebar-formatting($color-accent6, $color-accent3);
 }
+
 .design-archives {
-text-align: center;
-border: 4px solid $color-accent5; 
-background-color: $color-accent4;
-margin-top: 3px;
-margin: bottom 1px; 
+    @include sidebar-formatting($color-accent5, $color-accent4);
 }

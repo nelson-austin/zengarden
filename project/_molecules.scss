@@ -52,8 +52,13 @@
 }
 
 .design-selection nav ul {
+    text-align: left;
+    @include atoms.breakpoint(large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    }
 }
 
 @media (min-width: 800px) {
