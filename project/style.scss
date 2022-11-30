@@ -66,12 +66,3 @@ h2::before {
   }
 }
 }
-
-.intro {
-   /* .00 */
-    background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
-    background-color: lighten($color-h2, 65%);
-    background-size: cover;
-    overflow: hidden;
-    position: relative;
-}
