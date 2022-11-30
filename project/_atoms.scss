@@ -157,7 +157,7 @@ img {
 h2 {
     font-family: $font-h2;
     color: $color-h2;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 0;
     // font-family: Georgia, serif;
     //color: #8d01a7;
@@ -214,7 +214,7 @@ p {
 }
 
 a {
-    border-bottom: 2px solid $color-accent2;
+   
     color: $color-body;
     text-decoration: none;
 
@@ -240,6 +240,10 @@ ul {
         margin-top: 1rem;
     }
 }}
+
+//.requirements url (beachball.svg)//
+   
+
 
 /* Footer CSS/Git/etc. */
 footer {
@@ -356,16 +360,38 @@ footer {
 
 
 .design-selection h3{
-    font-size:large;
+    //font-size:large;
     text-align: center;
     display: block;
+  
 }
 .design-selection {
     text-align: center;
     border: 4px solid $color-accent2;
    margin-top: 3px;
-    margin: bottom 2px; 
+   padding-top: 10px;}
    
+   .main-supporting h3 {
+    //font-size-adjust: 1px;padding-bottom:3px;
+   }
+   .preamble h3{
+    font-size: 1.5em;
+   }
+  
+  // .explanation h3 {
+    
+   
+   .participation h3{
+    font-size: 1.5em;
+   }
+   .requirements h3{
+    font-size:1.5em;
+   }
+   .benefits h3{
+    font-size:1.5em;
+   }
+   .zen-resources {
+    width:100%;
    }
 // making footer responsive//
 
@@ -374,19 +400,22 @@ footer {
 
   /* @media (min-width: 400px){ */ 
 .zen-resources h3{
-    font-size:large;
+    font-size:1.5em;
     text-align: center;
+    width:100%;
 }
 .zen-resources {
     text-align: center;
-    border: 4px solid $color-accent6;
+    border: 8px solid $color-accent6;
     background-color:$color-accent5;
     margin-top: 3px;
     margin-bottom:  1px; 
    }
 .design-archives h3{
-    font-size:large;
+    font: size 1.5em;
     text-align: center;
+    width:100%;
+    padding-top: 3px;
 }
 
 
@@ -395,8 +424,7 @@ footer {
 text-align: center;
 border: 4px solid $color-accent5; 
 background-color: $color-accent4;
-margin-top: 3px;
-margin: bottom 1px; 
+
 }
 
 
