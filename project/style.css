@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-body {
+html {
   background-color: #fcefdb;
   width: 100%;
   content: " ";
@@ -573,7 +573,7 @@ h2::before {
   }
 }
 
-.page-wrapper {
+.intro {
   /* .00 */
   background: url(beach_background.jpg) top center no-repeat, url(background_sand.png) center repeat-y;
   background-color: #fcefdb;
