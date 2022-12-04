@@ -137,6 +137,7 @@ $break-small: 500px;
 * {
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -345,7 +346,19 @@ div {
         margin-left: 3rem;
 
      
-
+        &:nth-of-type(1)::after {
+            background-image: url(sign_post.png);
+            display: block;
+            position: absolute;
+            left: 25%;
+            top: 200px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 250px;
+            height: 500px;
+            content: "";
+            grid-column: 2/3;
+        }
         &:nth-of-type(2)::before {
             @include requirement-number-large(1, $color-accent1);
         }
