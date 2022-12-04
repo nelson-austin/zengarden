@@ -225,7 +225,7 @@ div {
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .requirements > p {
     margin-left: 3rem;
   }
