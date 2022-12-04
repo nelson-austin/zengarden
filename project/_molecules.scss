@@ -15,14 +15,15 @@
 } }
 
 .main {
-    @include atoms.breakpoint(large) {
+    @include atoms.breakpoint(xlarge) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
         .participation, .explanation, .benefits {
             grid-column: 3 / 4;
         }
-
+    }
+    @include atoms.breakpoint(large) {
         .requirements {
             h3 {
                 text-align: center;

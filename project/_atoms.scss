@@ -36,11 +36,11 @@
 @mixin red-line-afterwards-footer($side) {
     content: '';
     position: absolute;
-    width: 30rem;
+    width: 20rem;
     height: 2px;
     display: block;
     clear: both;
-    #{$side}: -35rem;
+    #{$side}: -25rem;
     top: 50%;
     background-color: $color-accent1;
 }
@@ -105,6 +105,7 @@
 // media breakpoints
 $break-large: 800px;
 $break-small: 500px;
+$break-xlarge: 1200px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
@@ -121,6 +122,12 @@ $break-small: 500px;
 
     @else if $break ==small {
         @media (max-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else if $break ==xlarge {
+        @media (min-width: $break-xlarge) {
             @content;
         }
     }
@@ -370,7 +377,7 @@ div {
 }
 
 footer {
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
         position: relative;
 
         &::before {
