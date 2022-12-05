@@ -203,7 +203,7 @@ h2 {
     padding: 2rem;
     font-family: $font-h2;
     color: $color-h2;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 0;
 }
 
@@ -211,7 +211,7 @@ h3 {
     font-family: $font-h3;
     text-transform: uppercase;
     color: $color-h3 ;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: right;
     margin-bottom: 0;
 }
@@ -445,16 +445,15 @@ footer {
 
 .design-selection {
     @include sidebar-formatting($color-accent2, none);
-}
+    background: linear-gradient(45deg, rgba($color-accent1, 0.3), rgba($color-accent2, 0.3), rgba($color-accent3, 0.3), rgba($color-accent4, 0.3), rgba($color-accent5, 0.3), rgba($color-accent6, 0.3));
 
-.design-selection nav li {
-    background-image: url('pink.png');
-    background: repeat;
-    padding: 8px;
-    text-align: left;
-}
+    nav li {
+        background-image: url('pink.png');
+        background: repeat;
+        padding: 8px;
+        text-align: left;
+    }
 
-.design-selection {
     @include breakpoint(large) {
         li:nth-child(1) {
             @include umbrella-magic('teal.png');

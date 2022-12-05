@@ -53,7 +53,7 @@ h2 {
   padding: 2rem;
   font-family: Georgia, serif;
   color: #82510A;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 0;
 }
 
@@ -61,7 +61,7 @@ h3 {
   font-family: Georgia, serif;
   text-transform: uppercase;
   color: #44bdb2;
-  font-size: 2em;
+  font-size: 2rem;
   text-align: right;
   margin-bottom: 0;
 }
@@ -372,19 +372,18 @@ div {
   margin-top: 3rem;
   margin: bottom 1px;
   width: 50%;
+  background: linear-gradient(45deg, rgba(255, 92, 53, 0.3), rgba(0, 138, 162, 0.3), rgba(156, 189, 173, 0.3), rgba(247, 120, 121, 0.3), rgba(239, 135, 0, 0.3), rgba(218, 0, 0, 0.3));
 }
 .design-selection h3 {
   text-align: center;
   font-size: 1.5rem;
 }
-
 .design-selection nav li {
   background-image: url("pink.png");
   background: repeat;
   padding: 8px;
   text-align: left;
 }
-
 @media (min-width: 800px) {
   .design-selection li:nth-child(1) {
     background-repeat: no-repeat;
