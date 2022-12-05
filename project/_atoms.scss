@@ -36,11 +36,11 @@
 @mixin red-line-afterwards-footer($side) {
     content: '';
     position: absolute;
-    width: 30rem;
+    width: 20rem;
     height: 2px;
     display: block;
     clear: both;
-    #{$side}: -35rem;
+    #{$side}: -25rem;
     top: 50%;
     background-color: $color-accent1;
 }
@@ -101,10 +101,24 @@
         font-size:1.5rem;
     }
 }
+@mixin umbrella-magic($background-image) {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 150px;
+    height: 150px;
+    transition: all 400ms;
+    padding-top: 35px;
+    padding-left: 20px;
+    background-image: url($background-image);
+    &:hover {
+        transform: scale(1.2);
+    }
+}
 
 // media breakpoints
 $break-large: 800px;
 $break-small: 500px;
+$break-xlarge: 1200px;
 
 @mixin breakpoint($break) {
     @if $break ==large {
@@ -114,13 +128,19 @@ $break-small: 500px;
     }
 
     @else if $break ==medium {
-        @media (max-width: $break-medium) {
+        @media (max-width: $break-large) {
             @content;
         }
     }
 
     @else if $break ==small {
         @media (max-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else if $break ==xlarge {
+        @media (min-width: $break-xlarge) {
             @content;
         }
     }
@@ -137,6 +157,7 @@ $break-small: 500px;
 * {
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -162,10 +183,6 @@ body {
    
     background-size: contain;
     position: relative;
-
-    .page-wrapper {
-        padding: 1rem;
-    }
 }
 
 img {
@@ -176,6 +193,7 @@ img {
 }
 
 h2 {
+    padding: 2rem;
     font-family: $font-h2;
     color: $color-h2;
     font-size: 2.5em;
@@ -195,7 +213,7 @@ h1 {
     font-family: $font-h1;
     color: $color-h1;
     font-size: 3rem;
-    padding-top: 0;
+    padding: 2rem;
     padding-bottom: 16rem;
     letter-spacing: -2px;
     text-align: left;
@@ -224,6 +242,9 @@ p {
 }
 
 .summary {
+    p {
+        padding: 2rem;
+    }
     p~p {
         display: none;
     }
@@ -322,8 +343,8 @@ div {
 
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-.requirements>p {
-    @include breakpoint(small) {
+.requirements>p:not(:first-child) {
+    @include breakpoint(medium) {
         margin-left: 3rem;
 
        
@@ -342,20 +363,50 @@ div {
     }
 
     @include breakpoint(large) {
-        margin-left: 3rem;
+        
 
      
-
+        &:nth-of-type(1)::after {
+            background-image: url(sign_post.png);
+            display: block;
+            position: absolute;
+            left: 12%;
+            top: 300px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 250px;
+            height: 500px;
+            content: "";
+            grid-column: 2/3;
+        }
         &:nth-of-type(2)::before {
             @include requirement-number-large(1, $color-accent1);
+            margin-left: 3rem;
         }
 
         &:nth-of-type(3)::before {
             @include requirement-number-large(2, $color-accent4);
+            margin-left: 3rem;
         }
 
         &:nth-of-type(4)::before {
             @include requirement-number-large(3, $color-accent5);
+            margin-left: 3rem;
+        }
+    }
+    @include breakpoint(xlarge){
+        &:nth-of-type(1)::after {
+            background-image: url(sign_post.png);
+            display: block;
+            position: absolute;
+            left: 25%;
+            top: 200px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 250px;
+            height: 500px;
+            content: "";
+            grid-column: 2/3;
         }
     }
 }
@@ -415,76 +466,52 @@ footer {
     padding: 8px;
     text-align:left;
 }
-.design-selection{
-    a~a::before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        background-size: contain;
-        width: 4rem;
-        height: 4rem;
-        background-repeat: no-repeat;
-        margin: 2rem;
-        z-index: -1;
-        animation: rain 5s linear infinite;
-        top: -20px;
-      
+.design-selection {    
+    @include breakpoint(large) {
+        li:nth-child(1){
+            grid-column:1/3;
+            grid-row: 1/2;
+            @include umbrella-magic('pink.png');
+        }
+        li:nth-child(2) {
+            grid-column:3/5;
+            grid-row: 1/2;
+            @include umbrella-magic('pink.png');
+        }
+        li:nth-child(3) {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            @include umbrella-magic('gold.png')
+        }
+        li:nth-child(4) {
+            grid-column: 3/5;
+            grid-row: 2/3;
+            @include umbrella-magic('coral.png')
+        }
+        li:nth-child(5) {
+            grid-column: 1/3;
+            grid-row: 3/4;
+            @include umbrella-magic('red.png')
+        }
+        li:nth-child(6) {
+            grid-column: 3/5;
+            grid-row: 3/4;
+            @include umbrella-magic('teal.png')
+        }
+        li:nth-child(7) {
+            grid-column:1/3;
+            grid-row: 5/6;
+            @include umbrella-magic('pink.png')
+        }
+        li:nth-child(8) {
+            grid-column: 3/5;
+            grid-row: 5/6;
+            @include umbrella-magic('pink.png')
+        }
     }
-
-    li:nth-child(1){
-        grid-column:1/3;
-        grid-row: 1/2;
-    }
- li:nth-child(1) a::before {
-    background-image: url("pink.png");
-    left: 0;
-    
 }
 
-li:nth-child(2) {
-    grid-column:3/5;
-    grid-row: 1/2;
-}
-
- li:nth-child(2) a::before{
-    background-image: url("green.png");
-    left: 100px;
-}
-
-li:nth-child(3) {
-    grid-column: 1/3;
-    grid-row: 3/4;
-}
- li:nth-child(3) a::before{
-     background-image: url("gold.png");
-}
-
-li:nth-child(4) {
-    grid-column: 3/5;
-    grid-row: 3/4;
-}
- li:nth-child(4) a::before{
-     background-image: url("coral.png");
-} 
-li:nth-child(5) {
-    grid-column: 1/3;
-    grid-row: 5/6;
-}
-li:nth-child(6) {
-    grid-column: 3/5;
-    grid-row: 5/6;
-}
-li:nth-child(7) {
-    grid-column:1/3;
-    grid-row: 7/8;
-}
-li:nth-child(8) {
-    grid-column: 3/5;
-    grid-row: 7/8;
-}
-}
-
-@keyframes rain {
+/*@keyframes rain {
     0%{
     top: -20px;
     }
@@ -503,12 +530,14 @@ li:nth-child(8) {
     100% {
         top: 0;
     }
-}
+}*/
 
 .zen-resources {
     @include sidebar-formatting($color-accent6, $color-accent3);
+    margin-bottom: 2rem;
 }
 
 .design-archives {
     @include sidebar-formatting($color-accent5, $color-accent4);
+    margin-bottom: 2rem;
 }

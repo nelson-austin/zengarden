@@ -41,28 +41,31 @@ h2::before {
 
 // Boardwalk image
 .main {
+  padding: 2em;
   @include atoms.breakpoint(large) {
-  padding-top: 50rem;
-  overflow-x: hidden;
+    overflow-x: hidden;
+  }
+  @include atoms.breakpoint(xlarge) {
+  padding-top: 30rem;
 
   &::before {
   content: "";
   overflow-x: hidden;
   background-image: url(boardwalk.png);
   background-repeat: no-repeat;
-  background-size: 2583px 2334px;
-  width: 100%;
-  height: 2334px;
+  background-size: 100%;
+  width: 1200px;
+  height: 1200px;
   position: absolute;
   left: 0rem;
-  top: -60rem;
+  top: 10rem;
   z-index: 10;
 
-  -webkit-transform:rotate(15deg);
-  -moz-transform: rotate(15deg);
-  -ms-transform: rotate(15deg);
-  -o-transform: rotate(15deg);
-  transform: rotate(15deg);
+  -webkit-transform:rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
   }
 }
 }

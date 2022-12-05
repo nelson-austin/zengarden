@@ -6,7 +6,8 @@
 
 
 .preamble {
-    @include atoms.breakpoint(large) {
+    padding: 2em;
+    @include atoms.breakpoint(xlarge) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         p {
@@ -20,9 +21,15 @@
         grid-template-columns: repeat(3, 1fr);
 
         .participation, .explanation, .benefits {
+            grid-column: 1 / 4;
+        }
+    }
+    @include atoms.breakpoint(xlarge) {
+        .participation, .explanation, .benefits {
             grid-column: 3 / 4;
         }
-
+    }
+    @include atoms.breakpoint(large) {
         .requirements {
             h3 {
                 text-align: center;
@@ -73,4 +80,9 @@
     .design-selection {
         grid-column: 1/3;
     }
+}
+
+.intro {
+    overflow: hidden;
+    position: relative;
 }
