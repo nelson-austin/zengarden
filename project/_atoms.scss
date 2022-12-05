@@ -344,16 +344,19 @@ div {
 }
 
 .requirements p:nth-of-type(2)::after {
-    background-image: url(beachball.svg);
-    display: block;
-    position: absolute;
-    left: 15%;
-    top: 250px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100px;
-    height: 100px;
-    content: "";
+    @include breakpoint(large) {
+        background-image: url(beachball.svg);
+        display: block;
+        position: absolute;
+        left: 15%;
+        top: 250px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+        content: "";
+    }
+    
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
@@ -379,7 +382,7 @@ div {
             background-image: url(sign_post.png);
             display: block;
             position: absolute;
-            left: 12%;
+            left: 5%;
             top: 300px;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -405,7 +408,7 @@ div {
         }
     }
 
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
         &:nth-of-type(1)::after {
             background-image: url(sign_post.png);
             display: block;
@@ -449,6 +452,7 @@ footer {
     }
 
     @include breakpoint(large) {
+        width: auto;
         li:nth-child(1) {
             @include umbrella-magic('teal.png');
         }

@@ -224,17 +224,19 @@ div {
   position: relative;
 }
 
-.requirements p:nth-of-type(2)::after {
-  background-image: url(beachball.svg);
-  display: block;
-  position: absolute;
-  left: 15%;
-  top: 250px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100px;
-  height: 100px;
-  content: "";
+@media (min-width: 800px) {
+  .requirements p:nth-of-type(2)::after {
+    background-image: url(beachball.svg);
+    display: block;
+    position: absolute;
+    left: 15%;
+    top: 250px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100px;
+    height: 100px;
+    content: "";
+  }
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
@@ -272,7 +274,7 @@ div {
     background-image: url(sign_post.png);
     display: block;
     position: absolute;
-    left: 12%;
+    left: 5%;
     top: 300px;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -312,7 +314,7 @@ div {
     margin-left: 3rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .requirements > p:not(:first-child):nth-of-type(1)::after {
     background-image: url(sign_post.png);
     display: block;
@@ -378,6 +380,9 @@ div {
   text-align: left;
 }
 @media (min-width: 800px) {
+  .design-selection {
+    width: auto;
+  }
   .design-selection li:nth-child(1) {
     background-repeat: no-repeat;
     background-size: 100%;
