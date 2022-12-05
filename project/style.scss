@@ -41,6 +41,7 @@ h2::before {
 
 // Boardwalk image
 .main {
+  padding: 2em;
   @include atoms.breakpoint(large) {
     overflow-x: hidden;
   }
@@ -57,7 +58,7 @@ h2::before {
   height: 1200px;
   position: absolute;
   left: 0rem;
-  top: 0rem;
+  top: 10rem;
   z-index: 10;
 
   -webkit-transform:rotate(-15deg);

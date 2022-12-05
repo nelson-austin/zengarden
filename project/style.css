@@ -45,6 +45,7 @@ img {
 }
 
 h2 {
+  padding: 2rem;
   font-family: Georgia, serif;
   color: #82510A;
   font-size: 2.5em;
@@ -64,7 +65,7 @@ h1 {
   font-family: Georgia, serif;
   color: black;
   font-size: 3rem;
-  padding-top: 0;
+  padding: 2rem;
   padding-bottom: 16rem;
   letter-spacing: -2px;
   text-align: left;
@@ -87,6 +88,9 @@ p {
   text-align: center;
 }
 
+.summary p {
+  padding: 2rem;
+}
 .summary p ~ p {
   display: none;
 }
@@ -224,10 +228,10 @@ div {
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
 @media (max-width: 800px) {
-  .requirements > p {
+  .requirements > p:not(:first-child) {
     margin-left: 3rem;
   }
-  .requirements > p:nth-of-type(2)::before {
+  .requirements > p:not(:first-child):nth-of-type(2)::before {
     content: "1";
     font-size: 4rem;
     font-weight: 800;
@@ -235,7 +239,7 @@ div {
     position: absolute;
     margin-left: -3rem;
   }
-  .requirements > p:nth-of-type(3)::before {
+  .requirements > p:not(:first-child):nth-of-type(3)::before {
     content: "2";
     font-size: 4rem;
     font-weight: 800;
@@ -243,7 +247,7 @@ div {
     position: absolute;
     margin-left: -3rem;
   }
-  .requirements > p:nth-of-type(4)::before {
+  .requirements > p:not(:first-child):nth-of-type(4)::before {
     content: "3";
     font-size: 4rem;
     font-weight: 800;
@@ -253,10 +257,52 @@ div {
   }
 }
 @media (min-width: 800px) {
-  .requirements > p {
+  .requirements > p:not(:first-child):nth-of-type(1)::after {
+    background-image: url(sign_post.png);
+    display: block;
+    position: absolute;
+    left: 12%;
+    top: 300px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 250px;
+    height: 500px;
+    content: "";
+    grid-column: 2/3;
+  }
+  .requirements > p:not(:first-child):nth-of-type(2)::before {
+    content: "1";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #FF5C35;
+    position: relative;
+    display: block;
+    text-align: center;
     margin-left: 3rem;
   }
-  .requirements > p:nth-of-type(1)::after {
+  .requirements > p:not(:first-child):nth-of-type(3)::before {
+    content: "2";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #F77879;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-left: 3rem;
+  }
+  .requirements > p:not(:first-child):nth-of-type(4)::before {
+    content: "3";
+    font-size: 4rem;
+    font-weight: 800;
+    color: #EF8700;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .requirements > p:not(:first-child):nth-of-type(1)::after {
     background-image: url(sign_post.png);
     display: block;
     position: absolute;
@@ -268,33 +314,6 @@ div {
     height: 500px;
     content: "";
     grid-column: 2/3;
-  }
-  .requirements > p:nth-of-type(2)::before {
-    content: "1";
-    font-size: 4rem;
-    font-weight: 800;
-    color: #FF5C35;
-    position: relative;
-    display: block;
-    text-align: center;
-  }
-  .requirements > p:nth-of-type(3)::before {
-    content: "2";
-    font-size: 4rem;
-    font-weight: 800;
-    color: #F77879;
-    position: relative;
-    display: block;
-    text-align: center;
-  }
-  .requirements > p:nth-of-type(4)::before {
-    content: "3";
-    font-size: 4rem;
-    font-weight: 800;
-    color: #EF8700;
-    position: relative;
-    display: block;
-    text-align: center;
   }
 }
 
@@ -503,6 +522,7 @@ div {
   margin-top: 3rem;
   margin: bottom 1px;
   width: 50%;
+  margin-bottom: 2rem;
 }
 .zen-resources h3 {
   text-align: center;
@@ -518,12 +538,16 @@ div {
   margin-top: 3rem;
   margin: bottom 1px;
   width: 50%;
+  margin-bottom: 2rem;
 }
 .design-archives h3 {
   text-align: center;
   font-size: 1.5rem;
 }
 
+.preamble {
+  padding: 2em;
+}
 @media (min-width: 1200px) {
   .preamble {
     display: grid;
@@ -634,6 +658,9 @@ h2::before {
   }
 }
 
+.main {
+  padding: 2em;
+}
 @media (min-width: 800px) {
   .main {
     overflow-x: hidden;
@@ -653,7 +680,7 @@ h2::before {
     height: 1200px;
     position: absolute;
     left: 0rem;
-    top: 0rem;
+    top: 10rem;
     z-index: 10;
     -webkit-transform: rotate(-15deg);
     -moz-transform: rotate(-15deg);

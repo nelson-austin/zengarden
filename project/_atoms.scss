@@ -193,6 +193,7 @@ img {
 }
 
 h2 {
+    padding: 2rem;
     font-family: $font-h2;
     color: $color-h2;
     font-size: 2.5em;
@@ -212,7 +213,7 @@ h1 {
     font-family: $font-h1;
     color: $color-h1;
     font-size: 3rem;
-    padding-top: 0;
+    padding: 2rem;
     padding-bottom: 16rem;
     letter-spacing: -2px;
     text-align: left;
@@ -241,6 +242,9 @@ p {
 }
 
 .summary {
+    p {
+        padding: 2rem;
+    }
     p~p {
         display: none;
     }
@@ -339,7 +343,7 @@ div {
 
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-.requirements>p {
+.requirements>p:not(:first-child) {
     @include breakpoint(medium) {
         margin-left: 3rem;
 
@@ -359,9 +363,38 @@ div {
     }
 
     @include breakpoint(large) {
-        margin-left: 3rem;
+        
 
      
+        &:nth-of-type(1)::after {
+            background-image: url(sign_post.png);
+            display: block;
+            position: absolute;
+            left: 12%;
+            top: 300px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 250px;
+            height: 500px;
+            content: "";
+            grid-column: 2/3;
+        }
+        &:nth-of-type(2)::before {
+            @include requirement-number-large(1, $color-accent1);
+            margin-left: 3rem;
+        }
+
+        &:nth-of-type(3)::before {
+            @include requirement-number-large(2, $color-accent4);
+            margin-left: 3rem;
+        }
+
+        &:nth-of-type(4)::before {
+            @include requirement-number-large(3, $color-accent5);
+            margin-left: 3rem;
+        }
+    }
+    @include breakpoint(xlarge){
         &:nth-of-type(1)::after {
             background-image: url(sign_post.png);
             display: block;
@@ -374,17 +407,6 @@ div {
             height: 500px;
             content: "";
             grid-column: 2/3;
-        }
-        &:nth-of-type(2)::before {
-            @include requirement-number-large(1, $color-accent1);
-        }
-
-        &:nth-of-type(3)::before {
-            @include requirement-number-large(2, $color-accent4);
-        }
-
-        &:nth-of-type(4)::before {
-            @include requirement-number-large(3, $color-accent5);
         }
     }
 }
@@ -512,8 +534,10 @@ footer {
 
 .zen-resources {
     @include sidebar-formatting($color-accent6, $color-accent3);
+    margin-bottom: 2rem;
 }
 
 .design-archives {
     @include sidebar-formatting($color-accent5, $color-accent4);
+    margin-bottom: 2rem;
 }
