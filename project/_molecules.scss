@@ -40,6 +40,7 @@
             grid-template-columns: repeat(3, 1fr);
 
             h3, p:first-of-type {
+                margin-top: 20px;
                 grid-column: 1 / 4;
             }
 
@@ -62,8 +63,6 @@
     text-align: left;
     @include atoms.breakpoint(large) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
     text-align: center;
     }
 }
