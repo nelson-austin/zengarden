@@ -42,13 +42,6 @@ body {
   position: relative;
 }
 
-img {
-  max-width: 75%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 h2 {
   padding: 2rem;
   font-family: Georgia, serif;
