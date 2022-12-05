@@ -41,9 +41,11 @@ h2::before {
 
 // Boardwalk image
 .main {
+  @include atoms.breakpoint(large) {
+    overflow-x: hidden;
+  }
   @include atoms.breakpoint(xlarge) {
   padding-top: 30rem;
-  overflow-x: hidden;
 
   &::before {
   content: "";

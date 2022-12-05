@@ -6,7 +6,7 @@
 
 
 .preamble {
-    @include atoms.breakpoint(large) {
+    @include atoms.breakpoint(xlarge) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         p {
@@ -15,10 +15,15 @@
 } }
 
 .main {
-    @include atoms.breakpoint(xlarge) {
+    @include atoms.breakpoint(large) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
 
+        .participation, .explanation, .benefits {
+            grid-column: 1 / 4;
+        }
+    }
+    @include atoms.breakpoint(xlarge) {
         .participation, .explanation, .benefits {
             grid-column: 3 / 4;
         }
