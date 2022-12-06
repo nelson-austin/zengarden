@@ -3,26 +3,26 @@
 
   @keyframes rotate {
     0% {
-      transform: rotate(0) translate(-15px, 20px);
+      transform: rotate(0);
     }
     15% {
-      transform: rotate(0) translate(-15px, 20px);
+      transform: rotate(0);
     }
     20% {
-      transform: rotate(20deg) translate(-15px, 20px);
+      transform: rotate(20deg);
     }
     30% {
-      transform: rotate(20deg) translate(-15px, 20px);
+      transform: rotate(20deg);
     }
     40% {
-      transform: rotate(-35deg) translate(-15px, 20px);
+      transform: rotate(-35deg);
     }
     50% {
-      transform: rotate(-35deg) translate(-15px, 20px);
+      transform: rotate(-35deg);
     }
 
  
     100% {
-        transform: rotate(360deg) translate(-15px, 20px);
+        transform: rotate(360deg);
     }
   }

@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
 @keyframes rotate {
   0% {
-    transform: rotate(0) translate(-15px, 20px);
+    transform: rotate(0);
   }
   15% {
-    transform: rotate(0) translate(-15px, 20px);
+    transform: rotate(0);
   }
   20% {
-    transform: rotate(20deg) translate(-15px, 20px);
+    transform: rotate(20deg);
   }
   30% {
-    transform: rotate(20deg) translate(-15px, 20px);
+    transform: rotate(20deg);
   }
   40% {
-    transform: rotate(-35deg) translate(-15px, 20px);
+    transform: rotate(-35deg);
   }
   50% {
-    transform: rotate(-35deg) translate(-15px, 20px);
+    transform: rotate(-35deg);
   }
   100% {
-    transform: rotate(360deg) translate(-15px, 20px);
+    transform: rotate(360deg);
   }
 }
 * {
@@ -67,7 +67,6 @@ h3 {
   text-transform: uppercase;
   color: #44bdb2;
   font-size: 2rem;
-  text-align: right;
   margin-bottom: 0;
 }
 
@@ -92,10 +91,6 @@ p {
   font-family: "proxima nova", monospace;
   margin: 0;
   color: black;
-}
-
-.preamble h3 {
-  text-align: center;
 }
 
 .summary p {
@@ -216,7 +211,8 @@ footer a:nth-child(5) {
 .explanation h3,
 .participation h3,
 .benefits h3 {
-  display: block;
+  display: grid;
+  grid-template-columns: 100px 1fr;
 }
 .explanation h3::before,
 .participation h3::before,
