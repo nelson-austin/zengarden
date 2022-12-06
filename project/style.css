@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cousine&family=Merriweather&family=Playfair+Display&display=swap");
 @keyframes rotate {
   0% {
-    transform: rotate(0);
+    transform: rotate(0) translate(-15px, 20px);
+  }
+  15% {
+    transform: rotate(0) translate(-15px, 20px);
+  }
+  20% {
+    transform: rotate(20deg) translate(-15px, 20px);
+  }
+  30% {
+    transform: rotate(20deg) translate(-15px, 20px);
+  }
+  40% {
+    transform: rotate(-35deg) translate(-15px, 20px);
   }
   50% {
-    transform: rotate(180deg);
+    transform: rotate(-35deg) translate(-15px, 20px);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translate(-15px, 20px);
   }
 }
 * {
