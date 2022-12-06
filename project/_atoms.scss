@@ -142,6 +142,11 @@ $break-xlarge: 1200px;
             @content;
         }
     }
+    @else if $break ==xlargem {
+        @media (max-width: $break-xlarge) {
+            @content;
+        }
+    }
 
     @else if $break ==xlarge {
         @media (min-width: $break-xlarge) {
@@ -276,7 +281,7 @@ ul {
     }
 }
 .preamble {
-    @include breakpoint(medium){
+    @include breakpoint(xlargem){
         &::after {
             @include red-line-afterwards();
             transform: translateY(30px);
