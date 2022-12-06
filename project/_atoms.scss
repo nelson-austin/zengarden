@@ -31,6 +31,7 @@
     display: block;
     clear: both;
     background-color: $color-accent1;
+    transform: translateY(-15px);
 }
 
 @mixin red-line-afterwards-footer($side) {
@@ -99,6 +100,7 @@
     h3 {
         text-align: center;
         font-size: 1.5rem;
+        padding: 0 0 2rem 0;
     }
 }
 
@@ -108,7 +110,7 @@
     width: 150px;
     height: 150px;
     transition: all 400ms;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-left: 20px;
     background-image: url($background-image);
 
@@ -137,6 +139,11 @@ $break-xlarge: 1200px;
 
     @else if $break ==small {
         @media (max-width: $break-small) {
+            @content;
+        }
+    }
+    @else if $break ==xlargem {
+        @media (max-width: $break-xlarge) {
             @content;
         }
     }
@@ -206,7 +213,6 @@ h3 {
     text-transform: uppercase;
     color: $color-h3 ;
     font-size: 2rem;
-    text-align: right;
     margin-bottom: 0;
 }
 
@@ -234,12 +240,6 @@ p {
     font-family: $font-body;
     margin: 0;
     color: $color-body;
-}
-
-.preamble {
-    h3 {
-        text-align: center;
-    }
 }
 
 .summary {
@@ -277,6 +277,23 @@ ul {
         &::after {
             @include red-line-afterwards();
             margin-top: 1rem;
+        }
+    }
+}
+.preamble {
+    @include breakpoint(xlargem){
+        &::after {
+            @include red-line-afterwards();
+            transform: translateY(30px);
+        }
+    }
+}
+.requirements {
+    @include breakpoint(medium){
+        padding-top: 30px;
+        &::before {
+            @include red-line-afterwards();
+            transform: translateY(-15px);
         }
     }
 }
@@ -330,11 +347,12 @@ footer {
 .explanation h3,
 .participation h3,
 .benefits h3 {
-    display: block;
+    display: grid;
+    grid-template-columns: 100px 1fr;
 
     &::before {
         @include sunglasses();
-        animation: rotate 3s linear infinite;
+        animation: rotate 3s infinite;
     }
 }
 
@@ -360,20 +378,23 @@ div {
 }
 
 /* NUMBERS BY REQUIREMENT PARAGRAPH */
-.requirements>p:not(:first-child) {
+.requirements>p {
     @include breakpoint(medium) {
         margin-left: 3rem;
-
-        &:nth-of-type(2)::before {
+        &:nth-of-type(1)::before {
             @include requirement-number(1, $color-accent1);
         }
 
+        &:nth-of-type(2)::before {
+            @include requirement-number(2, $color-accent2);
+        }
+
         &:nth-of-type(3)::before {
-            @include requirement-number(2, $color-accent4);
+            @include requirement-number(3, $color-accent4);
         }
 
         &:nth-of-type(4)::before {
-            @include requirement-number(3, $color-accent5);
+            @include requirement-number(4, $color-accent5);
         }
     }
 
